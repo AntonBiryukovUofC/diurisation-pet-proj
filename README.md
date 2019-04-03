@@ -1,7 +1,6 @@
-kalnin-marcellus
+Diarisation Pet Proj
 ==============================
 
-Marcellus(not wallace[D[D[D[D[D[D[D[3~W[D[D[D[D[D[D [D[D[D[D[D[D[D[D[D[Das[2~[D[DKalnin Marcellus (not wallace) prod prediction
 
 Project Organization
 ------------
