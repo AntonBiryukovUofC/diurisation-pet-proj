@@ -1,0 +1,6 @@
+TPOT score (r2) on training set:
+0.9648430430802164
+
+TPOT best internal CV score (r2):
+0.7089773549090727
+

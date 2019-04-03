@@ -1,0 +1,13 @@
+Random forest score (R-squared) on training set:
+0.9593881840967606
+
+Random forest internal CV score (R-squared):
+0.6933099638632888
+
+
+
+Best parameters:
+{'bootstrap': True}
+
+Feature importances:
+{'scores': {'HorizontalLength(ft)': 0.18362612326307626, 'StageSpacing(ft)': 0.3305706939542858, 'ProppantIntensity(llb_ft)': 0.06168098770299264, 'ProppantConcentration(llb_gal)': 0.04648773058240307, 'Bg': 0.07455798379220352, 'iso': 0.07526402609785675, 'Sw': 0.036967559458559215, 'Phi': 0.03659734705432724, 'Depth-TrueVertical(ft)': 0.0895113709137895, 'Pressure': 0.059141912888671856, 'FluidType_LABELS': 0.005594264291834196}, 'ranks': {'StageSpacing(ft)': 1, 'HorizontalLength(ft)': 2, 'Depth-TrueVertical(ft)': 3, 'iso': 4, 'Bg': 5, 'ProppantIntensity(llb_ft)': 6, 'Pressure': 7, 'ProppantConcentration(llb_gal)': 8, 'Sw': 9, 'Phi': 10, 'FluidType_LABELS': 11}}

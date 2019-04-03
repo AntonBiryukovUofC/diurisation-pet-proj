@@ -1,0 +1,28 @@
+Training set sample size:  1053
+
+Number of original features used:  11
+
+No separate testing set was used
+
+
+
+==========================================================   MODEL SCORES: IN_SAMPLE_TRAINING   ==========================================================
+
+R-Squared:  0.9698885917682586
+
+Mean Squared Error:  60403508360.13299
+
+Mean Absolute Error:  185750.37250722424
+
+Median Absolute Error:  145208.4236083962
+
+==========================================================   MODEL SCORES: CV   ==========================================================
+
+R-Squared:  0.730567897711452
+
+Mean Squared Error:  540481006993.1864
+
+Mean Absolute Error:  513609.7567514875
+
+Median Absolute Error:  336160.3424489987
+
