@@ -1,5 +1,21 @@
 Diarisation Pet Proj
 ==============================
+Run `test_diarisation.py` from the project's root folder. Speaker IDs will show up in a text file under `data/processed/`.
+Name of that file, as well as a bunch of other input parameters are stored in a config file under `models/config.ini`.
+Please read it carefully as it contains a lot of information critical for understanding of the workflow.
+
+## TODOs:
+
+- Visualization - tie `wav`, `rttm` together, create series of pngs.
+- Tie the `png` together into a video, concatenate it with the original video of Zuck fighting with Cruz
+- Get the `VoxCeleb`/`VoxCeleb2` data, calculate all the embeddings, store them with labels, **OR**
+- Figure out if we can avoid downloading data and just use a pre-trained model from somewhere that produces 
+    **embeddings with similarity property**
+- Using all above, select an appropriate model to be used as a feature extractor, and get embeddings of a given `.wav` 
+in a sliding window fashion
+- Figure out how to tie metadata, and pull out Male/Female ids
+   - **NB**: classifier of masculinity/femininity could be simply an average of top 10 / N predictions' gender 
+- Set up KNN in the embedding space with an appropriate metric / pick `top_n` from the prediction vector
 
 
 Project Organization
