@@ -134,7 +134,7 @@ speech_turns = partition.crop(speech)
 from matplotlib import pyplot as plt
 from pyannote.core import Segment, notebook
 
-# only plot one minute (between t=120s and t=180s)
+plt
 notebook.crop = Segment(120, 180)
 
 # helper function to make visualization prettier
