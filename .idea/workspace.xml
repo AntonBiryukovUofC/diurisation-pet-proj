@@ -2,25 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6537a4af-c771-4bc8-bc27-ff747be3ce66" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/notebooks/test_predict.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/prepare_vox_celeb1_filelist.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tool/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tool/toolkits.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/vggvoxvlad/backbone.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/vggvoxvlad/generator.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/vggvoxvlad/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/vggvoxvlad/model.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/vggvoxvlad/predict.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/vggvoxvlad/utils.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test_predictionvgg.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ghostvlad/test_notebook.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/ghostvlad/test_notebook.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/pretrained/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/pretrained/segmentation.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/pretrained/tsne.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/notebooks/Visualisation-tests.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/notebooks/Visualisation-tests.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notebooks/diarization_tests-Copy1.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_predictionvgg.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_predictionvgg.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -53,7 +35,7 @@
           <entry key="Ini" value="10" />
           <entry key="Markdown" value="1438" />
           <entry key="PLAIN_TEXT" value="86" />
-          <entry key="Python" value="2789" />
+          <entry key="Python" value="2811" />
           <entry key="Scratch" value="35" />
         </counts>
       </usages-collector>
@@ -148,8 +130,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test_predictionvgg.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="41" column="67" lean-forward="true" selection-start-line="41" selection-start-column="67" selection-end-line="41" selection-end-column="67" />
+            <state relative-caret-position="69">
+              <caret line="3" column="20" lean-forward="true" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -573,8 +555,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test_predictionvgg.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="41" column="67" lean-forward="true" selection-start-line="41" selection-start-column="67" selection-end-line="41" selection-end-column="67" />
+        <state relative-caret-position="69">
+          <caret line="3" column="20" lean-forward="true" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>

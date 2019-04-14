@@ -1,6 +1,7 @@
 import sys
 import argparse
 import numpy as np
+sys.path.insert(0,'.')
 # gpu configuration
 import matplotlib.pyplot as plt
 import src.vggvoxvlad.model as model
