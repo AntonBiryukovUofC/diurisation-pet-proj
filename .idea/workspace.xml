@@ -2,11 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6537a4af-c771-4bc8-bc27-ff747be3ce66" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/test_visualization.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notebooks/test_predict.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/prepare_vox_celeb1_filelist.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tool/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tool/toolkits.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vggvoxvlad/backbone.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vggvoxvlad/generator.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vggvoxvlad/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vggvoxvlad/model.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vggvoxvlad/predict.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vggvoxvlad/utils.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_predictionvgg.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/pretrained/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/models/pretrained/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ghostvlad/test_notebook.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/ghostvlad/test_notebook.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/pretrained/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/pretrained/segmentation.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/pretrained/tsne.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/notebooks/Visualisation-tests.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/notebooks/Visualisation-tests.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/audioplayer.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/notebooks/diarization_tests-Copy1.ipynb" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,15 +35,16 @@
           <entry key="project.closed" value="2" />
           <entry key="project.open.time.0" value="2" />
           <entry key="project.open.time.1" value="1" />
-          <entry key="project.opened" value="3" />
+          <entry key="project.open.time.6" value="1" />
+          <entry key="project.opened" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="IPNB" value="2" />
+          <entry key="IPNB" value="3" />
           <entry key="Markdown" value="1" />
           <entry key="PLAIN_TEXT" value="2" />
-          <entry key="Python" value="9" />
+          <entry key="Python" value="16" />
           <entry key="Scratch" value="1" />
         </counts>
       </usages-collector>
@@ -38,7 +53,7 @@
           <entry key="Ini" value="10" />
           <entry key="Markdown" value="1438" />
           <entry key="PLAIN_TEXT" value="86" />
-          <entry key="Python" value="1628" />
+          <entry key="Python" value="2789" />
           <entry key="Scratch" value="35" />
         </counts>
       </usages-collector>
@@ -49,7 +64,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sad_diarisation_bk.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="547">
+            <state relative-caret-position="3795">
               <caret line="165" column="58" selection-start-line="165" selection-start-column="58" selection-end-line="165" selection-end-column="58" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
@@ -71,18 +86,9 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/notebooks/Visualisation-tests.ipynb">
-          <provider selected="true" editor-type-id="ipnb-editor">
-            <state>
-              <selected id="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test_visualization.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
+            <state relative-caret-position="529">
               <caret line="23" column="92" selection-start-line="23" selection-start-column="92" selection-end-line="23" selection-end-column="92" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
@@ -94,8 +100,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/player.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="409">
-              <caret line="39" column="27" lean-forward="true" selection-start-line="39" selection-start-column="27" selection-end-line="39" selection-end-column="27" />
+            <state relative-caret-position="547">
+              <caret line="39" column="27" selection-start-line="39" selection-start-column="27" selection-end-line="39" selection-end-column="27" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
@@ -103,11 +109,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/viewer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="463">
-              <caret line="129" column="25" lean-forward="true" selection-start-line="129" selection-start-column="25" selection-end-line="129" selection-end-column="25" />
+            <state relative-caret-position="2714">
+              <caret line="118" column="19" selection-start-line="118" selection-start-column="19" selection-end-line="118" selection-end-column="19" />
               <folding>
                 <element signature="e#0#17#0" expanded="true" />
               </folding>
@@ -116,22 +122,37 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models/config.ini">
+        <entry file="file://$PROJECT_DIR$/src/prepare_vox_celeb1_filelist.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="417">
-              <caret line="104" column="37" selection-start-line="104" selection-start-column="37" selection-end-line="104" selection-end-column="37" />
+            <state relative-caret-position="391">
+              <caret line="17" column="108" selection-start-line="17" selection-start-column="108" selection-end-line="17" selection-end-column="108" />
+              <folding>
+                <element signature="e#0#19#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="322">
-                <caret line="14" column="27" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
-              </first_editor>
-              <second_editor />
+        <entry file="file://$PROJECT_DIR$/src/vggvoxvlad/model.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="138">
+              <caret line="6" column="42" selection-start-line="6" selection-start-column="42" selection-end-line="6" selection-end-column="42" />
+              <folding>
+                <element signature="e#0#37#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test_predictionvgg.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="322">
+              <caret line="41" column="67" lean-forward="true" selection-start-line="41" selection-start-column="67" selection-end-line="41" selection-end-column="67" />
+              <folding>
+                <element signature="e#0#10#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -172,20 +193,25 @@
         <option value="$PROJECT_DIR$/src/player.py" />
         <option value="$PROJECT_DIR$/test_visualization.py" />
         <option value="$PROJECT_DIR$/src/viewer.py" />
+        <option value="$PROJECT_DIR$/src/prepare_vox_celeb1_filelist.py" />
+        <option value="$PROJECT_DIR$/notebooks/test_predict.ipynb" />
+        <option value="$PROJECT_DIR$/src/vggvoxvlad/model.py" />
+        <option value="$PROJECT_DIR$/test_predictionvgg.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1912" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1176" />
+    <option name="x" value="-17" />
+    <option name="y" value="198" />
+    <option name="width" value="1934" />
+    <option name="height" value="1038" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -193,32 +219,26 @@
               <item name="diurisation-pet-proj" type="b2602c69:ProjectViewProjectNode" />
               <item name="diurisation-pet-proj" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="diurisation-pet-proj" type="b2602c69:ProjectViewProjectNode" />
-              <item name="diurisation-pet-proj" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="diurisation-pet-proj" type="b2602c69:ProjectViewProjectNode" />
-              <item name="diurisation-pet-proj" type="462c0819:PsiDirectoryNode" />
-              <item name="notebooks" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="diurisation-pet-proj" type="b2602c69:ProjectViewProjectNode" />
-              <item name="diurisation-pet-proj" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="Python" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/prepare_sad_for_pybk.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/prepare_vox_celeb1_filelist.py" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Repos\diurisation-pet-proj\src" />
+      <recent name="D:\Repos\diurisation-pet-proj\notebooks" />
+      <recent name="D:\Repos\diurisation-pet-proj\src\vggvoxvlad" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Repos\diurisation-pet-proj\src" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -232,7 +252,28 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.test_visualization">
+  <component name="RunManager" selected="Python.test_predictionvgg">
+    <configuration name="prepare_vox_celeb" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="diurisation-pet-proj" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/prepare_vox_celeb1_filelist.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="scratch_2" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="diurisation-pet-proj" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -275,7 +316,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="test_visualization" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="test_predictionvgg" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="diurisation-pet-proj" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -287,7 +328,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test_visualization.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test_predictionvgg.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -299,11 +340,13 @@
     <list>
       <item itemvalue="Python.test_diarisation" />
       <item itemvalue="Python.scratch_2" />
-      <item itemvalue="Python.test_visualization" />
+      <item itemvalue="Python.prepare_vox_celeb" />
+      <item itemvalue="Python.test_predictionvgg" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.test_visualization" />
+        <item itemvalue="Python.test_predictionvgg" />
+        <item itemvalue="Python.prepare_vox_celeb" />
         <item itemvalue="Python.scratch_2" />
       </list>
     </recent_temporary>
@@ -322,15 +365,15 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-8" width="1936" height="1176" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.24899329" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.31275168" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32962447" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.17424242" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.30598053" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3463143" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -396,16 +439,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="322">
-            <caret line="14" column="27" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/notebooks/diarization_tests.ipynb">
       <provider selected="true" editor-type-id="ipnb-editor">
         <state>
@@ -413,21 +446,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sad_diarisation_bk.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="547">
-          <caret line="165" column="58" selection-start-line="165" selection-start-column="58" selection-end-line="165" selection-end-column="58" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/audioplayer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2277" />
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/audioplayer.py" />
     <entry file="file://$USER_HOME$/AppData/Local/Continuum/anaconda3/envs/pyBK/Lib/site-packages/matplotlib/pyplot.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="273">
@@ -442,6 +461,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/notebooks/Visualisation-tests.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/config.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2392">
+          <caret line="104" column="37" selection-start-line="104" selection-start-column="37" selection-end-line="104" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="322">
+            <caret line="14" column="27" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test_diarisation.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="115">
@@ -452,24 +495,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/config.ini">
+    <entry file="file://$PROJECT_DIR$/src/sad_diarisation_bk.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="417">
-          <caret line="104" column="37" selection-start-line="104" selection-start-column="37" selection-end-line="104" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/notebooks/Visualisation-tests.ipynb">
-      <provider selected="true" editor-type-id="ipnb-editor">
-        <state>
-          <selected id="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_visualization.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="23" column="92" selection-start-line="23" selection-start-column="92" selection-end-line="23" selection-end-column="92" />
+        <state relative-caret-position="3795">
+          <caret line="165" column="58" selection-start-line="165" selection-start-column="58" selection-end-line="165" selection-end-column="58" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
@@ -478,8 +507,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/player.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="409">
-          <caret line="39" column="27" lean-forward="true" selection-start-line="39" selection-start-column="27" selection-end-line="39" selection-end-column="27" />
+        <state relative-caret-position="547">
+          <caret line="39" column="27" selection-start-line="39" selection-start-column="27" selection-end-line="39" selection-end-column="27" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
           </folding>
@@ -488,10 +517,66 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/viewer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="463">
-          <caret line="129" column="25" lean-forward="true" selection-start-line="129" selection-start-column="25" selection-end-line="129" selection-end-column="25" />
+        <state relative-caret-position="2714">
+          <caret line="118" column="19" selection-start-line="118" selection-start-column="19" selection-end-line="118" selection-end-column="19" />
           <folding>
             <element signature="e#0#17#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_visualization.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="529">
+          <caret line="23" column="92" selection-start-line="23" selection-start-column="92" selection-end-line="23" selection-end-column="92" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/notebooks/test_predict.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tool/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/vggvoxvlad/backbone.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/prepare_vox_celeb1_filelist.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="17" column="108" selection-start-line="17" selection-start-column="108" selection-end-line="17" selection-end-column="108" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/vggvoxvlad/model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="6" column="42" selection-start-line="6" selection-start-column="42" selection-end-line="6" selection-end-column="42" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_predictionvgg.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="41" column="67" lean-forward="true" selection-start-line="41" selection-start-column="67" selection-end-line="41" selection-end-column="67" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
           </folding>
         </state>
       </provider>
