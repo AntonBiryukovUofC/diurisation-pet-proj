@@ -68,11 +68,10 @@ def voxceleb1_split(path, network, split_seconds=3, n=3,
 	return result_list
 
 
-def plot_split(result_list):
+def plot_split(result_list, num_speakers = 2):
     t = []
     prob = []
     name = []
-    num_speakers = 2
     
     for df in result_list:
         if df['Probability'][0] >= 0.5:
