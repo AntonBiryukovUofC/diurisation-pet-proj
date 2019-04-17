@@ -71,13 +71,13 @@ Project Organization
 
 ## How to use split.py for speaker prediction:
 
--Initialize arguments and params as seen in `split_test.ipynb`
--Create network using `network = src.vggvoxvlad.split.make_network(weight_path, args, input_dim=(257, None, 1), num_class=1251)` where `weight_path` is a `.h5` file
--Create a list of dataframes using `result_list = src.vggvoxvlad.split.voxceleb1_split(path, network, split_seconds=3, n=3,win_length=400, sr=16000, hop_length=160,n_fft=512, spec_len=250, n_classes=1251)` where `path` is a `.wav` file
--Each dataframe contains the headers `Time (s)`,     `Speaker`, `Probability`, `Country` and  `Gender`
--Each dataframe will display the three speakers with the highest predicted probability (to change this, change the `n` parameter)
--`voxceleb1_split()` will predict a speker every three seconds by default (to change this, change the `split_seconds` parameter)
--To show a bargraph of the results, use `plot_split(result_list, num_speakers=2)` where `num_speakers` is the actual number of speakers in the `.wav` file
+- Initialize arguments and params as seen in `split_test.ipynb`
+- Create network using `network = src.vggvoxvlad.split.make_network(weight_path, args, input_dim=(257, None, 1), num_class=1251)` where `weight_path` is a `.h5` file
+- Create a list of dataframes using `result_list = src.vggvoxvlad.split.voxceleb1_split(path, network, split_seconds=3, n=3,win_length=400, sr=16000, hop_length=160,n_fft=512, spec_len=250, n_classes=1251)` where `path` is a `.wav` file
+- Each dataframe contains the headers `Time (s)`,     `Speaker`, `Probability`, `Country` and  `Gender`
+- Each dataframe will display the three speakers with the highest predicted probability (to change this, change the `n` parameter)
+- `voxceleb1_split()` will predict a speker every three seconds by default (to change this, change the `split_seconds` parameter)
+- To show a bargraph of the results, use `plot_split(result_list, num_speakers=2)` where `num_speakers` is the actual number of speakers in the `.wav` file
 
 
 <p><small>Project based on the <a target="_blank" href="https://drivendata.github.io/cookiecutter-data-science/">cookiecutter data science project template</a>. #cookiecutterdatascience</small></p>
