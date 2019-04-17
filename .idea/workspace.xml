@@ -34,7 +34,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Ini" value="10" />
-          <entry key="Markdown" value="1642" />
+          <entry key="Markdown" value="2138" />
           <entry key="PLAIN_TEXT" value="114" />
           <entry key="Python" value="6857" />
           <entry key="Scratch" value="35" />
@@ -126,8 +126,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="391">
-                <caret line="17" column="130" selection-start-line="17" selection-start-column="130" selection-end-line="17" selection-end-column="130" />
+              <first_editor relative-caret-position="460">
+                <caret line="20" column="72" lean-forward="true" selection-start-line="20" selection-start-column="72" selection-end-line="20" selection-end-column="72" />
               </first_editor>
               <second_editor />
             </state>
@@ -674,8 +674,8 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="391">
-            <caret line="17" column="130" selection-start-line="17" selection-start-column="130" selection-end-line="17" selection-end-column="130" />
+          <first_editor relative-caret-position="460">
+            <caret line="20" column="72" lean-forward="true" selection-start-line="20" selection-start-column="72" selection-end-line="20" selection-end-column="72" />
           </first_editor>
           <second_editor />
         </state>

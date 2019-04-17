@@ -6,16 +6,25 @@ Please read it carefully as it contains a lot of information critical for unders
 
 ## TODOs:
 
-- ~~Visualization - tie `wav`, `rttm` together, create series of pngs~~. -- done by Anton
+- ~~Visualization - tie `wav`, `rttm` together, create series of pngs~~. -- done by __Anton__
 - ~~Tie the `png` together into a video, concatenate it with the original video of Zuck fighting with Cruz~~
-- ~~Get the `VoxCeleb`/`VoxCeleb2` data, calculate all the embeddings, store them with labels~~ (done by Anton), **OR**
-- Figure out if we can avoid downloading data and just use a pre-trained model from somewhere that produces 
-    **embeddings with similarity property** -- **did not work, so we share our own models here trained on VoxCeleb1**
+- ~~Get the `VoxCeleb`/`VoxCeleb2` data, calculate all the embeddings, store them with labels~~ (done by __Anton__), **OR**
 - ~~Using all above, select an appropriate model to be used as a feature extractor, and get embeddings of a given `.wav` 
-in a sliding window fashion~~ -- done by Dan
-- ~~Figure out how to tie metadata, and pull out Male/Female ids~~ - done by Dan
-- **NB**: classifier of masculinity/femininity could be simply an average of top 10 / N predictions' gender 
+in a sliding window fashion~~ -- done by __Dan__
+- ~~Figure out how to tie metadata, and pull out Male/Female ids~~ - done by __Dan__
 - ~~Set up KNN in the embedding space with an appropriate metric / pick `top_n` from the prediction vector~~ - done by Dan & Anton
+- ~~Develop an interactive web-friendly visualization~~ - done by __Anton__
+- ~~Apply Speaker Classification to `.wav` in a rolling window, get top N predictions~~ - done by __Dan__
+- Build a classifier of masculinity/femininity ()could be simply an average of top 10 / N predictions' gender)
+- Wrap everything into a nice set of functions
+- Tie a microphone recording module to the visualization via Bokeh server app
+- Start working on a Flask application and think about how to deploy it 
+ 
+
+## What did not work
+
+- Figuring out if we can avoid downloading data and just use a pre-trained model from somewhere that produces 
+    **embeddings with similarity property** -- **did not work, so we share our own models here trained on VoxCeleb1**
 
 
 Project Organization
