@@ -46,8 +46,8 @@ def readUEMfile(path,filename,ext,nFeatures,frameshift):
             notEvaluatedFramesMask[0,int(it):int(et)]=1
     return notEvaluatedFramesMask
   
-def readSADfile(path,filename,ext,nFeatures,frameshift, format):   
-    sadFile = path + filename + ext
+def readSADfile(sad_file_name,nFeatures,frameshift, format):
+    sadFile = sad_file_name
     notEvaluatedFramesMask=np.zeros([1, nFeatures])    
     f=open(sadFile,'r')
     C=f.read().splitlines()
@@ -521,3 +521,5 @@ def getSegmentationFile(format, frameshift,finalSegmentTable, finalClusteringTab
     outf.writelines(solution)
     outf.write('\n')
     outf.close()
+    output_fname = outputPath+filename+outputExt
+    return output_fname

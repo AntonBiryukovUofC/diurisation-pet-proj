@@ -2,11 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6537a4af-c771-4bc8-bc27-ff747be3ce66" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/bokeh-visual.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bokeh-visual-backup.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notebooks/Visualisation-tests.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/notebooks/Visualisation-tests.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notebooks/test_predict.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/notebooks/test_predict.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notebooks/voxceleb1-exploratory-analysis.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/notebooks/voxceleb1-exploratory-analysis.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/config.ini" beforeDir="false" afterPath="$PROJECT_DIR$/models/config.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bokeh-visual.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/bokeh-visual.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pybk/diarizationFunctions.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/pybk/diarizationFunctions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sad_diarisation_bk.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/sad_diarisation_bk.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_diarisation.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_diarisation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_visualization.py" beforeDir="false" afterPath="$PROJECT_DIR$/deprecated-visualization.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,12 +21,12 @@
     <session id="-2072493795">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
-          <entry key="project.open.time.0" value="2" />
+          <entry key="project.closed" value="3" />
+          <entry key="project.open.time.0" value="3" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.6" value="1" />
-          <entry key="project.opened" value="5" />
+          <entry key="project.opened" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
@@ -31,7 +34,7 @@
           <entry key="IPNB" value="3" />
           <entry key="Markdown" value="1" />
           <entry key="PLAIN_TEXT" value="2" />
-          <entry key="Python" value="18" />
+          <entry key="Python" value="22" />
           <entry key="Scratch" value="1" />
         </counts>
       </usages-collector>
@@ -39,8 +42,8 @@
         <counts>
           <entry key="Ini" value="10" />
           <entry key="Markdown" value="1438" />
-          <entry key="PLAIN_TEXT" value="86" />
-          <entry key="Python" value="3906" />
+          <entry key="PLAIN_TEXT" value="114" />
+          <entry key="Python" value="6857" />
           <entry key="Scratch" value="35" />
         </counts>
       </usages-collector>
@@ -51,8 +54,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sad_diarisation_bk.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="800">
-              <caret line="176" column="20" selection-start-line="176" selection-start-column="20" selection-end-line="176" selection-end-column="20" />
+            <state relative-caret-position="474">
+              <caret line="214" column="65" lean-forward="true" selection-start-line="214" selection-start-column="65" selection-end-line="214" selection-end-column="65" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -63,20 +66,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test_diarisation.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
-              <folding>
-                <element signature="e#0#12#0" expanded="true" />
-              </folding>
+            <state>
+              <caret column="6" lean-forward="true" selection-start-column="6" selection-end-column="6" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test_visualization.py">
+        <entry file="file://$PROJECT_DIR$/deprecated-visualization.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="690">
-              <caret line="45" column="59" selection-start-line="45" selection-start-column="59" selection-end-line="45" selection-end-column="59" />
+            <state relative-caret-position="359">
+              <caret line="18" selection-start-line="18" selection-end-line="29" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -85,25 +85,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/player.py">
+        <entry file="file://$PROJECT_DIR$/src/pybk/diarizationFunctions.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="897">
-              <caret line="39" column="27" selection-start-line="39" selection-start-column="27" selection-end-line="39" selection-end-column="27" />
-              <folding>
-                <element signature="e#0#14#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/viewer.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="475">
-              <caret line="118" column="19" selection-start-line="118" selection-start-column="19" selection-end-line="118" selection-end-column="19" />
-              <folding>
-                <element signature="e#0#17#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="11123">
+              <caret line="523" column="19" selection-start-line="523" selection-start-column="19" selection-end-line="523" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -123,7 +108,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/vggvoxvlad/model.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
+            <state relative-caret-position="-276">
               <caret line="6" column="42" selection-start-line="6" selection-start-column="42" selection-end-line="6" selection-end-column="42" />
               <folding>
                 <element signature="e#0#37#0" expanded="true" />
@@ -132,11 +117,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test_predictionvgg.py">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/bokeh-visual.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="302">
-              <caret line="40" column="76" selection-start-line="40" selection-start-column="76" selection-end-line="40" selection-end-column="76" />
+            <state relative-caret-position="819">
+              <caret line="55" lean-forward="true" selection-start-line="55" selection-end-line="55" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -144,13 +129,22 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/bokeh-visual.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/bokeh-visual-backup.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="249">
-              <caret line="45" column="17" lean-forward="true" selection-start-line="45" selection-start-column="17" selection-end-line="45" selection-end-column="17" />
+            <state relative-caret-position="161">
+              <caret line="12" selection-start-line="12" selection-end-line="15" selection-end-column="47" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/player.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="14">
+              <caret line="26" column="22" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="22" />
               <folding>
-                <element signature="e#0#46#0" expanded="true" />
+                <element signature="e#0#14#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -171,6 +165,7 @@
       <find>set</find>
       <find>ylim</find>
       <find>xlim</find>
+      <find>play</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -184,8 +179,6 @@
         <option value="$PROJECT_DIR$/src/pybk/main.py" />
         <option value="$PROJECT_DIR$/src/prepare_sad_for_pybk.py" />
         <option value="$PROJECT_DIR$/src/pybk/config.ini" />
-        <option value="$PROJECT_DIR$/src/sad_diarisation_bk.py" />
-        <option value="$PROJECT_DIR$/test_diarisation.py" />
         <option value="$PROJECT_DIR$/models/config.ini" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_2.py" />
@@ -196,22 +189,25 @@
         <option value="$PROJECT_DIR$/notebooks/test_predict.ipynb" />
         <option value="$PROJECT_DIR$/src/vggvoxvlad/model.py" />
         <option value="$PROJECT_DIR$/test_predictionvgg.py" />
+        <option value="$PROJECT_DIR$/src/pybk/diarizationFunctions.py" />
+        <option value="$PROJECT_DIR$/test_diarisation.py" />
+        <option value="$PROJECT_DIR$/src/bokeh-visual-backup.py" />
+        <option value="$PROJECT_DIR$/src/sad_diarisation_bk.py" />
         <option value="$PROJECT_DIR$/src/bokeh-visual.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-10" />
-    <option name="y" value="-10" />
-    <option name="width" value="2420" />
-    <option name="height" value="1470" />
+    <option name="x" value="1912" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1176" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -228,6 +224,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -236,13 +233,13 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Repos\diurisation-pet-proj\src" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Repos\diurisation-pet-proj\src" />
       <recent name="D:\Repos\diurisation-pet-proj\notebooks" />
       <recent name="D:\Repos\diurisation-pet-proj\src\vggvoxvlad" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Repos\diurisation-pet-proj\src" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -269,7 +266,7 @@
       <module name="" />
       <method v="2" />
     </configuration>
-    <configuration name="bokeh-visual" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="bokeh-visual (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="diurisation-pet-proj" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -283,6 +280,27 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/bokeh-visual.py" />
       <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="bokeh-visual" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="diurisation-pet-proj" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$USER_HOME$/AppData/Local/Continuum/anaconda3/envs/pyBK/Scripts/bokeh.exe" />
+      <option name="PARAMETERS" value="serve --show D:\Repos\diurisation-pet-proj\src\bokeh-visual.py" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -380,10 +398,12 @@
       <item itemvalue="Python.prepare_vox_celeb" />
       <item itemvalue="Python.test_predictionvgg" />
       <item itemvalue="Python.bokeh-visual" />
+      <item itemvalue="Python.bokeh-visual (1)" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.bokeh-visual" />
+        <item itemvalue="Python.bokeh-visual (1)" />
         <item itemvalue="Python.test_predictionvgg" />
         <item itemvalue="Python.prepare_vox_celeb" />
         <item itemvalue="Python.scratch_2" />
@@ -404,16 +424,16 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="1912" y="-8" width="1936" height="1176" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.20604026" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.20522387" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32962447" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.26564673" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3463143" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2651515" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3449235" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -421,11 +441,11 @@
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32962447" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="10" />
-      <window_info anchor="right" x="0" y="0" width="337" height="638" id="Documentation" side_tool="true" weight="0.3295302" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Key Promoter X" order="3" />
+      <window_info anchor="right" x="0" y="0" width="337" height="638" id="Documentation" order="4" side_tool="true" weight="0.32942432" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -541,13 +561,64 @@
     <entry file="file://$PROJECT_DIR$/src/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/vggvoxvlad/model.py">
+    <entry file="file://$USER_HOME$/AppData/Local/Continuum/anaconda3/envs/pyBK/Lib/site-packages/bokeh/models/widgets/buttons.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="6" column="42" selection-start-line="6" selection-start-column="42" selection-end-line="6" selection-end-column="42" />
+        <state relative-caret-position="595">
+          <caret line="116" column="6" selection-start-line="116" selection-start-column="6" selection-end-line="116" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Continuum/anaconda3/envs/pyBK/Lib/site-packages/matplotlib/backend_bases.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="2195" column="8" selection-start-line="2195" selection-start-column="8" selection-end-line="2195" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_predictionvgg.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="920">
+          <caret line="40" column="76" selection-start-line="40" selection-start-column="76" selection-end-line="40" selection-end-column="76" />
           <folding>
-            <element signature="e#0#37#0" expanded="true" />
+            <element signature="e#0#10#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/viewer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-86">
+          <caret line="265" column="38" selection-start-line="265" selection-start-column="38" selection-end-line="265" selection-end-column="38" />
+          <folding>
+            <element signature="e#0#17#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/player.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="14">
+          <caret line="26" column="22" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/deprecated-visualization.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="359">
+          <caret line="18" selection-start-line="18" selection-end-line="29" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pybk/diarizationFunctions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="11123">
+          <caret line="523" column="19" selection-start-line="523" selection-start-column="19" selection-end-line="523" selection-end-column="19" />
         </state>
       </provider>
     </entry>
@@ -561,79 +632,46 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/vggvoxvlad/model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-276">
+          <caret line="6" column="42" selection-start-line="6" selection-start-column="42" selection-end-line="6" selection-end-column="42" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test_diarisation.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-          </folding>
+        <state>
+          <caret column="6" lean-forward="true" selection-start-column="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bokeh-visual-backup.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="12" selection-start-line="12" selection-end-line="15" selection-end-column="47" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sad_diarisation_bk.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="800">
-          <caret line="176" column="20" selection-start-line="176" selection-start-column="20" selection-end-line="176" selection-end-column="20" />
+        <state relative-caret-position="474">
+          <caret line="214" column="65" lean-forward="true" selection-start-line="214" selection-start-column="65" selection-end-line="214" selection-end-column="65" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_visualization.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="690">
-          <caret line="45" column="59" selection-start-line="45" selection-start-column="59" selection-end-line="45" selection-end-column="59" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_predictionvgg.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="40" column="76" selection-start-line="40" selection-start-column="76" selection-end-line="40" selection-end-column="76" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Continuum/anaconda3/envs/pyBK/Lib/site-packages/bokeh/models/widgets/buttons.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="116" column="6" selection-start-line="116" selection-start-column="6" selection-end-line="116" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/viewer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="118" column="19" selection-start-line="118" selection-start-column="19" selection-end-line="118" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#17#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/player.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="897">
-          <caret line="39" column="27" selection-start-line="39" selection-start-column="27" selection-end-line="39" selection-end-column="27" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/bokeh-visual.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="45" column="17" lean-forward="true" selection-start-line="45" selection-start-column="17" selection-end-line="45" selection-end-column="17" />
+        <state relative-caret-position="819">
+          <caret line="55" lean-forward="true" selection-start-line="55" selection-end-line="55" />
           <folding>
-            <element signature="e#0#46#0" expanded="true" />
+            <element signature="e#0#10#0" expanded="true" />
           </folding>
         </state>
       </provider>

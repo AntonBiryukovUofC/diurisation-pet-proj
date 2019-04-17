@@ -13,7 +13,7 @@ from src.pybk.diarizationFunctions import extractFeatures, readUEMfile, readSADf
     getSegmentationFile
 
 
-def run_diarization(showName, config):
+def run_diarization(showName, config,sad_file_name):
     print('showName\t\t', showName)
     print('Extracting features')
     all_data = extractFeatures(config['PATH']['audio'] + showName + config['EXTENSION']['audio'],
@@ -27,7 +27,7 @@ def run_diarization(showName, config):
     else:
         print('UEM file does not exist. The complete audio content is considered.')
         mask_uem = np.ones([1, n_features])
-    mask_sad = readSADfile(config['PATH']['SAD'], showName, config['EXTENSION']['SAD'], n_features,
+    mask_sad = readSADfile(sad_file_name, n_features,
                            config.getfloat('FEATURES', 'frameshift'), config['GENERAL']['SADformat'])
     mask = np.logical_and(mask_uem, mask_sad)
     mask = mask[0][0:n_features]
@@ -114,11 +114,11 @@ def run_diarization(showName, config):
                                                                                                'smoothWin'),
                                                                                            n_speech_features)
         print('done')
-        getSegmentationFile(config['OUTPUT']['format'], config.getfloat('FEATURES', 'frameshift'), final_segment_table,
+        output_fname = getSegmentationFile(config['OUTPUT']['format'], config.getfloat('FEATURES', 'frameshift'), final_segment_table,
                             np.squeeze(final_clustering_table_resegmentation), showName, config['EXPERIMENT']['name'],
                             config['PATH']['output'], config['EXTENSION']['output'])
     else:
-        getSegmentationFile(config['OUTPUT']['format'], config.getfloat('FEATURES', 'frameshift'), segment_table,
+        output_fname = getSegmentationFile(config['OUTPUT']['format'], config.getfloat('FEATURES', 'frameshift'), segment_table,
                             final_clustering_table[:, best_clustering_id.astype(int) - 1], showName,
                             config['EXPERIMENT']['name'], config['PATH']['output'], config['EXTENSION']['output'])
 
@@ -137,6 +137,7 @@ def run_diarization(showName, config):
                                 output_path_ind, config['EXTENSION']['output'])
 
     print('\n%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%')
+    return output_fname
 
 
 def generate_sad_lbl(filename_input=f'../data/raw/z-c-feisty.wav', output_folder=f'../data/sad/', onset=0.7, offset=0.7,
@@ -156,16 +157,27 @@ def generate_sad_lbl(filename_input=f'../data/raw/z-c-feisty.wav', output_folder
     sad_content = '\n'.join(speech_str)
     with open(output_filename, 'w') as f:
         f.write(sad_content)
+    return output_filename
 
 
-def run_pyBK_diarisation(config_loc=None, input_file_folder=None):
+def run_pyBK_diarisation(config_loc=None, input_file_name = None, input_file_folder=None, output_folder = None, output_name = None,sad_file_name = None):
     config = configparser.ConfigParser()
     config.read(config_loc)
+    if output_folder is not None:
+        config['PATH']['output'] = output_folder
+    if sad_file_name is not None:
+        config['PATH']['SAD'] = ''
+    if output_name is not None:
+        config['EXPERIMENT']['name'] = output_name
     if input_file_folder is not None:
         config['PATH']['audio'] = input_file_folder
     # Audio files are searched at the corresponding folder
     showNameList = sorted(os.listdir(config['PATH']['audio']))
     showNameList = ' '.join(showNameList).replace(config['EXTENSION']['audio'], '').split()
+    # One file mode:
+    if input_file_name is not None:
+        showNameList =[input_file_name.replace(config['EXTENSION']['audio'], '')]
+        config['PATH']['audio'] = ''
     # If the output file already exists from a previous call it is deleted
     if os.path.isfile(config['PATH']['output'] + config['EXPERIMENT']['name'] + config['EXTENSION']['output']):
         os.remove(config['PATH']['output'] + config['EXPERIMENT']['name'] + config['EXTENSION']['output'])
@@ -174,6 +186,35 @@ def run_pyBK_diarisation(config_loc=None, input_file_folder=None):
     # Files are diarized one by one
     for idx, showName in enumerate(showNameList):
         print('\nProcessing file', idx + 1, '/', len(showNameList))
-        run_diarization(showName, config)
+        output_fname = run_diarization(showName, config,sad_file_name)
+    return output_fname
 
 
+def load_rttm(rttm_file_name,min_duration = 0.25):
+    import pandas as pd
+    speaker_track = pd.read_csv(rttm_file_name, header=None, delim_whitespace=True,
+                                names=['x1', 'filename', 'fileid', 'start', 'duration', 'skip1', 'skip2', 'speaker_id',
+                                       'skip3'])
+    speaker_track['end'] = speaker_track['start'] + speaker_track['duration']
+    speaker_track['id'] = speaker_track['speaker_id'].apply(lambda x: int(x.split('speaker')[1]))
+
+    bins_speaker = pd.DataFrame({'name': speaker_track['speaker_id'].values},
+                                index=pd.IntervalIndex.from_arrays(left=speaker_track['start'],
+                                                                   right=speaker_track['end']))
+    speaker_track.drop(['skip1', 'skip2', 'skip3'], axis=1, inplace=True)
+    speaker_track = speaker_track[speaker_track['duration'] > min_duration] # keep those longer than min_seconds
+    return speaker_track
+    #cat_type = CategoricalDtype(categories=speaker_track['speaker_id'].unique().tolist())
+
+def label_waveform_by_speaker(waveform_df,speaker_df):
+    waveform_df['ID']=np.nan
+    for i,row in speaker_df.iterrows():
+        st = row['start']
+        fn = row['end']
+        waveform_df.loc[(waveform_df['time'] > st) &(waveform_df['time'] < fn),'ID'] = row['id']
+    waveform_df['ID'] = waveform_df['ID'].fillna(0).astype('int')
+    waveform_df['id_adjusted'] = (waveform_df['ID'] - waveform_df['ID'].min())/(waveform_df['ID'].max() - waveform_df['ID'].min())-0.5
+
+    waveform_df['ID'] = waveform_df['ID'].fillna(0).astype('str')
+
+    return waveform_df
