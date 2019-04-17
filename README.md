@@ -12,7 +12,7 @@ Please read it carefully as it contains a lot of information critical for unders
 - ~~Using all above, select an appropriate model to be used as a feature extractor, and get embeddings of a given `.wav` 
 in a sliding window fashion~~ -- done by __Dan__
 - ~~Figure out how to tie metadata, and pull out Male/Female ids~~ - done by __Dan__
-- ~~Set up KNN in the embedding space with an appropriate metric / pick `top_n` from the prediction vector~~ - done by Dan & Anton
+- ~~Set up KNN in the embedding space with an appropriate metric / pick `top_n` from the prediction vector~~ - done by __Dan & Anton__
 - ~~Develop an interactive web-friendly visualization~~ - done by __Anton__
 - ~~Apply Speaker Classification to `.wav` in a rolling window, get top N predictions~~ - done by __Dan__
 - Build a classifier of masculinity/femininity ()could be simply an average of top 10 / N predictions' gender)
