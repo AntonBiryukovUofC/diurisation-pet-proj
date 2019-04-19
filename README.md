@@ -15,7 +15,7 @@ in a sliding window fashion~~ -- done by __Dan__
 - ~~Set up KNN in the embedding space with an appropriate metric / pick `top_n` from the prediction vector~~ - done by __Dan & Anton__
 - ~~Develop an interactive web-friendly visualization~~ - done by __Anton__
 - ~~Apply Speaker Classification to `.wav` in a rolling window, get top N predictions~~ - done by __Dan__
-- Build a classifier of masculinity/femininity ()could be simply an average of top 10 / N predictions' gender)
+- Build a classifier of masculinity/femininity (could be simply an average of top 10 / N predictions' gender)
 - Wrap everything into a nice set of functions
 - Tie a microphone recording module to the visualization via Bokeh server app
 - Start working on a Flask application and think about how to deploy it 

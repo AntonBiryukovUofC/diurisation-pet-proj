@@ -1,9 +1,9 @@
 import sys
 
-from bokeh.models import Div, ColumnDataSource,CategoricalColorMapper,Jitter
+from bokeh.models import Div, ColumnDataSource,CategoricalColorMapper,Jitter,LinearColorMapper,Slider
 from bokeh.palettes import d3
 from bokeh.plotting import figure, curdoc
-
+from bokeh.palettes import Spectral10
 sys.path.insert(0,'D:\\Repos\\diurisation-pet-proj')
 from bokeh.models.widgets import Toggle
 from src.player import AudioPlayer
@@ -33,6 +33,11 @@ height=250
 
 fname = '../data/raw/carell.wav'
 fname_rttm = '../data/processed/carell/carell.rttm'
+fname_speaker_id = '../data/processed/carell/carell.pkl'
+
+
+
+
 rttm_df = load_rttm(fname_rttm,min_duration=0.2)
 
 print(rttm_df.head())
@@ -71,16 +76,11 @@ toggle = Toggle(label='Play',active=False)
 def callback_tap(arg,s2=s2):
     xpos = arg.x
     data = s2.data
-    #print(xpos)
     data['x']=[xpos,xpos]
     s2.data =data
     ap.seek(xpos)
-    #s2.change.emit()
 
 def callback_play(arg):
-    #print(old)
-  #  global play
-   # play = not play
     p.title.text =f'{toggle.active}'
     if toggle.active:
         toggle.label = 'Pause'
@@ -93,8 +93,7 @@ def callback_play(arg):
         ap.pause()
 
 def update():
-    #global play
-    #if play:
+
     if toggle.active:
         if s2.data['x'][0]> max_time:
             #play = False
@@ -104,17 +103,35 @@ def update():
             ap.seek(s2.data['x'][0])
         else:
             d.text = f' Else: {play}'
-            #s2.data['x'] = [i + dt/1000 for i in s2.data['x']]
             s2.data['x'] = [ap.time(),ap.time()]
 
-            #s2.data['x'] = [s2.data['x'][0] + dt / 1000, s2.data['x'][0] + dt/1000]
+##### Probability figure section!
+df_prob=pd.read_pickle(fname_speaker_id).set_index('Time_s')
 
+df_prob['cumsum_prob'] = df_prob.groupby(['Speaker'])['Probability'].transform(pd.Series.cumsum)
+mapper = LinearColorMapper(palette=Spectral10, low=0, high=df_prob.index.nunique())
+def callback_prob(attr, old, new):
+    global source_prob
+    data_new = df_prob[df_prob.index <= new].groupby('Speaker').last().sort_values('cumsum_prob').reset_index().to_dict(
+        orient='list')
+    source_prob.data = data_new
+    p_prob.y_range.factors = source_prob.data['Speaker']
 
+slider = Slider(start=0, end=10, value=5, step=1, title="Time")
+df_subset = df_prob[df_prob.index <= slider.value].groupby('Speaker').last().sort_values('cumsum_prob').reset_index()
+print(df_subset.head())
 
+source_prob = ColumnDataSource(data=df_subset)
+
+p_prob = figure(y_range=source_prob.data['Speaker'])
+p_prob.hbar(y='Speaker', right='cumsum_prob', fill_color={'field': 'cumsum_prob', 'transform': mapper}, height=0.5,
+       source=source_prob)
+slider.on_change('value', callback_prob)
+####
 
 
 curdoc().add_periodic_callback(update, dt)
 p.on_event('tap',callback_tap)
 toggle.on_click(callback_play)
 # put the button and plot in a layout and add to the document
-curdoc().add_root(column(toggle, p,d))
+curdoc().add_root(column(toggle, p,p_prob,slider,d))
