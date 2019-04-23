@@ -9,7 +9,7 @@ if __name__ == '__main__':
                  'AMI.SpeakerDiarization.MixHeadset.train/weights/0280.pt')
     sad = SequenceLabeling(model=SAD_MODEL, device=torch.device('cuda'))
 
-    input_filename = f'data/raw/carell.wav'
+    input_filename = f'data/raw/galifianakis.wav'
     # rttm data/processed/carell_galifianakis/carell_galifianakis.rttm
     basename = os.path.splitext(os.path.basename(input_filename))[0]
     sad_folder = f'data/sad/'

@@ -2,29 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6537a4af-c771-4bc8-bc27-ff747be3ce66" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/test_split.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deprecated-visualization.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ghostvlad/aaron_ramset.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ghostvlad/backbone.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ghostvlad/generate_embeddings.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ghostvlad/model.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ghostvlad/predict.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ghostvlad/preprocess.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ghostvlad/pretrained/weights.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ghostvlad/split_test.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ghostvlad/test_notebook.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ghostvlad/test_predict.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ghostvlad/toolkits.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ghostvlad/utils.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ghostvlad/zuck_trimmed.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/notebooks/Visualisation-tests.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/notebooks/Visualisation-tests.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notebooks/split_test.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/notebooks/split_test.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notebooks/test_predict.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/notebooks/test_predict.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notebooks/voxceleb1-exploratory-analysis.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/notebooks/voxceleb1-exploratory-analysis.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/processed/carell_galifianakis/carell_galifianakis.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/processed/carell_galifianakis/carell_galifianakis.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/processed/carell_galifianakis/carell_galifianakis.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/data/processed/carell_galifianakis/carell_galifianakis.pkl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/config.ini" beforeDir="false" afterPath="$PROJECT_DIR$/models/config.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notebooks/visualisation-voxceleb.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/notebooks/visualisation-voxceleb.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/bokeh-visual.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/bokeh-visual.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vggvoxvlad/split.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/vggvoxvlad/split.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_diarisation.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_diarisation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_split.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_split.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -50,7 +35,7 @@
           <entry key="IPNB" value="8" />
           <entry key="Markdown" value="2" />
           <entry key="PLAIN_TEXT" value="2" />
-          <entry key="Python" value="28" />
+          <entry key="Python" value="31" />
           <entry key="Scratch" value="1" />
         </counts>
       </usages-collector>
@@ -59,7 +44,7 @@
           <entry key="Ini" value="10" />
           <entry key="Markdown" value="2143" />
           <entry key="PLAIN_TEXT" value="114" />
-          <entry key="Python" value="7573" />
+          <entry key="Python" value="8394" />
           <entry key="Scratch" value="35" />
         </counts>
       </usages-collector>
@@ -67,23 +52,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/vggvoxvlad/model.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="6" column="42" selection-start-line="6" selection-start-column="42" selection-end-line="6" selection-end-column="42" />
-              <folding>
-                <element signature="e#0#37#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/bokeh-visual.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="123" column="11" selection-start-line="123" selection-start-column="11" selection-end-line="123" selection-end-column="11" />
+            <state relative-caret-position="121">
+              <caret line="150" column="96" selection-start-line="150" selection-start-column="96" selection-end-line="150" selection-end-column="96" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -92,22 +65,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sad_diarisation_bk.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="83">
-              <caret line="145" column="68" selection-start-line="144" selection-start-column="4" selection-end-line="145" selection-end-column="68" />
-              <folding>
-                <element signature="e#0#19#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test_split.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="436">
-              <caret line="58" column="34" lean-forward="true" selection-start-line="58" selection-start-column="34" selection-end-line="58" selection-end-column="34" />
+            <state relative-caret-position="206">
+              <caret line="57" column="50" lean-forward="true" selection-start-line="57" selection-start-column="50" selection-end-line="57" selection-end-column="50" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -119,7 +80,19 @@
         <entry file="file://$PROJECT_DIR$/src/vggvoxvlad/split.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="206">
-              <caret line="26" column="81" lean-forward="true" selection-start-line="26" selection-start-column="81" selection-end-line="26" selection-end-column="81" />
+              <caret line="26" column="81" selection-start-line="26" selection-start-column="81" selection-end-line="26" selection-end-column="81" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test_diarisation.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="252">
+              <caret line="22" column="49" lean-forward="true" selection-start-line="22" selection-start-column="49" selection-end-line="22" selection-end-column="49" />
+              <folding>
+                <element signature="e#0#12#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -145,32 +118,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test_predictionvgg.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="359">
+            <state relative-caret-position="22">
               <caret line="40" column="76" selection-start-line="40" selection-start-column="76" selection-end-line="40" selection-end-column="76" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="297">
-                <caret line="17" column="48" selection-start-line="17" selection-start-column="48" selection-end-line="17" selection-end-column="48" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/bokeh-visual-backup.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="12" selection-start-line="12" selection-end-line="15" selection-end-column="47" />
             </state>
           </provider>
         </entry>
@@ -192,6 +144,10 @@
       <find>xlim</find>
       <find>play</find>
       <find>(-v)</find>
+      <find>row</find>
+      <find>d.</find>
+      <find>times</find>
+      <find>cumsum</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -215,17 +171,17 @@
         <option value="$PROJECT_DIR$/src/vggvoxvlad/model.py" />
         <option value="$PROJECT_DIR$/test_predictionvgg.py" />
         <option value="$PROJECT_DIR$/src/pybk/diarizationFunctions.py" />
-        <option value="$PROJECT_DIR$/test_diarisation.py" />
         <option value="$PROJECT_DIR$/src/bokeh-visual-backup.py" />
         <option value="$PROJECT_DIR$/src/sad_diarisation_bk.py" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/test_split.py" />
         <option value="$PROJECT_DIR$/src/vggvoxvlad/split.py" />
+        <option value="$PROJECT_DIR$/test_split.py" />
+        <option value="$PROJECT_DIR$/test_diarisation.py" />
         <option value="$PROJECT_DIR$/src/bokeh-visual.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-9" />
     <option name="y" value="-9" />
     <option name="width" value="1938" />
@@ -236,6 +192,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -248,22 +205,10 @@
               <item name="diurisation-pet-proj" type="462c0819:PsiDirectoryNode" />
               <item name="notebooks" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="diurisation-pet-proj" type="b2602c69:ProjectViewProjectNode" />
-              <item name="diurisation-pet-proj" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="diurisation-pet-proj" type="b2602c69:ProjectViewProjectNode" />
-              <item name="diurisation-pet-proj" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="vggvoxvlad" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -442,8 +387,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.bokeh-visual" />
-        <item itemvalue="Python.test_split" />
         <item itemvalue="Python.bokeh-visual (1)" />
+        <item itemvalue="Python.test_split" />
         <item itemvalue="Python.test_predictionvgg" />
         <item itemvalue="Python.prepare_vox_celeb" />
       </list>
@@ -471,7 +416,7 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32962447" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.38942978" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.38942978" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3449235" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -484,7 +429,7 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Key Promoter X" order="3" />
-      <window_info anchor="right" x="0" y="0" width="337" height="638" id="Documentation" order="4" side_tool="true" weight="0.32942432" />
+      <window_info anchor="right" x="0" y="0" width="337" height="638" id="Documentation" order="4" side_tool="true" weight="0.32885906" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -621,17 +566,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test_diarisation.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="6" lean-forward="true" selection-start-column="6" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/player.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="14">
           <caret line="26" column="22" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -690,16 +631,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test_predictionvgg.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="359">
-          <caret line="40" column="76" selection-start-line="40" selection-start-column="76" selection-end-line="40" selection-end-column="76" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/notebooks/split_test.ipynb">
       <provider selected="true" editor-type-id="ipnb-editor">
         <state>
@@ -707,10 +638,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/test_predictionvgg.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="40" column="76" selection-start-line="40" selection-start-column="76" selection-end-line="40" selection-end-column="76" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/vggvoxvlad/utils_dan.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="138">
           <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/vggvoxvlad/split.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="206">
+          <caret line="26" column="81" selection-start-line="26" selection-start-column="81" selection-end-line="26" selection-end-column="81" />
         </state>
       </provider>
     </entry>
@@ -724,17 +672,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/vggvoxvlad/split.py">
+    <entry file="file://$USER_HOME$/AppData/Local/Continuum/anaconda3/envs/pyBK/Lib/site-packages/librosa/core/audio.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="26" column="81" lean-forward="true" selection-start-line="26" selection-start-column="81" selection-end-line="26" selection-end-column="81" />
+        <state relative-caret-position="148">
+          <caret line="118" selection-start-line="118" selection-end-line="118" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Continuum/anaconda3/envs/pyBK/Lib/site-packages/audioread/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="353">
+          <caret line="115" selection-start-line="115" selection-end-line="115" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_diarisation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="22" column="49" lean-forward="true" selection-start-line="22" selection-start-column="49" selection-end-line="22" selection-end-column="49" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test_split.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="436">
-          <caret line="58" column="34" lean-forward="true" selection-start-line="58" selection-start-column="34" selection-end-line="58" selection-end-column="34" />
+        <state relative-caret-position="206">
+          <caret line="57" column="50" lean-forward="true" selection-start-line="57" selection-start-column="50" selection-end-line="57" selection-end-column="50" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
@@ -743,8 +708,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/bokeh-visual.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="123" column="11" selection-start-line="123" selection-start-column="11" selection-end-line="123" selection-end-column="11" />
+        <state relative-caret-position="121">
+          <caret line="150" column="96" selection-start-line="150" selection-start-column="96" selection-end-line="150" selection-end-column="96" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>
