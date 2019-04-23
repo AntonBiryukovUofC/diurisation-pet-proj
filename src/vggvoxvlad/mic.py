@@ -4,7 +4,7 @@ import os
 
 '''
 function records audio from the default microphone for length 't' seconds and sample rate 'sr', and deposits a .wav file
-in the directory specified by 'path'
+named 'file_name' in the directory specified by 'path'
 '''
 
 def record(file_name, path, t=10, sr=16000):
