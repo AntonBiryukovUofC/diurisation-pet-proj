@@ -4,8 +4,9 @@ import os
 
 '''
 function records audio from the default microphone for length 't' seconds and sample rate 'sr', and deposits a .wav file
-named 'file_name' in the directory specified by 'path'
+in the directory specified by 'path'
 '''
+
 
 def record(file_name, path, t=10, sr=16000):
     CHUNK = 1024
@@ -22,7 +23,7 @@ def record(file_name, path, t=10, sr=16000):
 
     frames = []
     print("starting recording " + file_name + ".")
-    for i in range(0, int(RATE / CHUNK )*t):
+    for i in range(0, int(RATE / CHUNK) * t):
         data = stream.read(CHUNK)
         frames.append(data)
     print("finished recording")
@@ -31,8 +32,9 @@ def record(file_name, path, t=10, sr=16000):
     stream.close()
     p.terminate()
 
-    os.chdir(path)
-    wf = wave.open(file_name, 'wb')
+    fpath = os.path.join(path, (file_name + '.wav'))
+    print(fpath)
+    wf = wave.open(fpath, 'wb')
     wf.setnchannels(CHANNELS)
     wf.setsampwidth(p.get_sample_size(FORMAT))
     wf.setframerate(RATE)
