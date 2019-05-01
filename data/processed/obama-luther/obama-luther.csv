@@ -1,0 +1,34 @@
+,Time_s,Speaker,Probability,Country,Gender
+0,0,John Carroll Lynch,0.4257339,USA,m
+1,0,Betty White,0.17772736,USA,f
+2,0,Alan Rickman,0.15509805,UK,m
+0,1,John Carroll Lynch,0.5598964,USA,m
+1,1,Andre Braugher,0.18975411,USA,m
+2,1,Betty White,0.083513275,USA,f
+0,2,John Carroll Lynch,0.73151684,USA,m
+1,2,Fred Williamson,0.08229062,USA,m
+2,2,Andre Braugher,0.057177227,USA,m
+0,3,John Carroll Lynch,0.31336918,USA,m
+1,3,Fred Williamson,0.17539324,USA,m
+2,3,Chi McBride,0.1261212,USA,m
+0,4,Chi McBride,0.23197258,USA,m
+1,4,Joe Flanigan,0.0715734,USA,m
+2,4,Vince Gilligan,0.055325944,USA,m
+0,5,Riley Smith,0.31152573,USA,m
+1,5,Jet Li,0.1696418,Singapore,m
+2,5,Shane West,0.05301837,USA,m
+0,6,Randolph Mantooth,0.18151478,USA,m
+1,6,John Carroll Lynch,0.16973647,USA,m
+2,6,David Attenborough,0.121358305,UK,m
+0,7,Randolph Mantooth,0.22707152,USA,m
+1,7,John Carroll Lynch,0.12478839,USA,m
+2,7,Loretta Devine,0.056058537,USA,f
+0,8,Randolph Mantooth,0.17656861,USA,m
+1,8,James Earl Jones,0.1715629,USA,m
+2,8,Jeff Garlin,0.07764019,USA,m
+0,9,Nathan Fillion,0.18034272,Canada,m
+1,9,Dan Fogler,0.11812037,USA,m
+2,9,Gary Busey,0.04845707,USA,m
+0,10,Steven Moffat,0.24792548,UK,m
+1,10,Betty White,0.12719503,USA,f
+2,10,Linda Gray,0.07765425,USA,f

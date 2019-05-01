@@ -50,3 +50,4 @@ class AudioPlayer:
         self.stream.close()
         self.wf.close()
         self.p.terminate()
+

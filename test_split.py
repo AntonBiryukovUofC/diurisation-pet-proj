@@ -45,7 +45,7 @@ params = {'dim': (257, None, 1),
 
 weight_path = 'models/vggvox/weights-09-0.923.h5'
 net = splt.make_network(weight_path, args)
-fname = 'data/raw/galifianakis.wav'
+fname = 'data/raw/atkinson-clarkson.wav'
 basename = os.path.splitext(os.path.basename(fname))[0]
 output_folder = f'data/processed/{basename}'
 
