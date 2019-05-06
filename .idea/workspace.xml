@@ -5,7 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6537a4af-c771-4bc8-bc27-ff747be3ce66" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/vggvoxvlad/mic.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/vggvoxvlad/mic.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/flask_app/app.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/flask_app/templates/all_links.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/diurisation-pet-proj.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/diurisation-pet-proj.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/flask_app/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/flask_app/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/flask_app/audio/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/flask_app/audio/audio.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/flask_app/audio/static/_files/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/flask_app/audio/static/audio/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/flask_app/audio/static/audio/mic128.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/flask_app/audio/static/audio/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/flask_app/audio/templates/audio/main.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/flask_app/mic_recorder.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/flask_app/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/flask_app/templates/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,27 +35,29 @@
           <entry key="project.open.time.1" value="2" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.3" value="2" />
-          <entry key="project.open.time.4" value="1" />
+          <entry key="project.open.time.4" value="2" />
           <entry key="project.open.time.6" value="1" />
-          <entry key="project.opened" value="10" />
+          <entry key="project.opened" value="11" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
+          <entry key="HTML" value="3" />
           <entry key="IPNB" value="8" />
           <entry key="JavaScript" value="1" />
           <entry key="Markdown" value="2" />
           <entry key="PLAIN_TEXT" value="2" />
-          <entry key="Python" value="47" />
+          <entry key="Python" value="50" />
           <entry key="Scratch" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
+          <entry key="HTML" value="372" />
           <entry key="Ini" value="10" />
           <entry key="Markdown" value="2143" />
-          <entry key="PLAIN_TEXT" value="114" />
-          <entry key="Python" value="10615" />
+          <entry key="PLAIN_TEXT" value="142" />
+          <entry key="Python" value="10932" />
           <entry key="Scratch" value="35" />
         </counts>
       </usages-collector>
@@ -50,38 +65,44 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/flask_app/app.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="644">
+              <caret line="28" column="22" selection-start-line="28" selection-start-column="22" selection-end-line="28" selection-end-column="22" />
+              <folding>
+                <element signature="e#82#129#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/flask_app/mic_recorder.py">
+        <entry file="file://$PROJECT_DIR$/src/flask_app/audio.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-138">
+              <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+              <folding>
+                <element signature="e#82#93#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/flask_app/templates/all_links.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="115">
+              <caret line="5" column="5" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/flask_app/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="299">
-              <caret line="13" column="24" lean-forward="true" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
-              <folding>
-                <element signature="e#82#92#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/vggvoxvlad/mic.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="10" column="44" lean-forward="true" selection-start-line="10" selection-start-column="44" selection-end-line="10" selection-end-column="44" />
-              <folding>
-                <element signature="e#0#14#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/flask_app/audio/audio.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-              <folding>
-                <element signature="e#82#91#0" expanded="true" />
-              </folding>
+              <caret line="19" column="23" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -89,7 +110,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/player.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1012">
+            <state relative-caret-position="658">
               <caret line="45" column="4" selection-start-line="45" selection-start-column="4" selection-end-line="46" selection-end-column="38" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
@@ -134,7 +155,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test_predictionvgg.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="874">
+            <state relative-caret-position="742">
               <caret line="40" column="76" selection-start-line="40" selection-start-column="76" selection-end-line="40" selection-end-column="76" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
@@ -149,6 +170,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -196,18 +218,25 @@
         <option value="$PROJECT_DIR$/src/bokeh-visual.py" />
         <option value="$PROJECT_DIR$/src/player.py" />
         <option value="$PROJECT_DIR$/src/mic.py" />
-        <option value="$PROJECT_DIR$/src/flask_app/audio/__init__.py" />
         <option value="$PROJECT_DIR$/src/flask_app/__init__.py" />
-        <option value="$PROJECT_DIR$/src/flask_app/audio/audio.py" />
         <option value="$PROJECT_DIR$/src/flask_app/mic_recorder.py" />
+        <option value="$PROJECT_DIR$/src/audio/__init__.py" />
+        <option value="$PROJECT_DIR$/src/flask_app/audio/templates/audio/main.html" />
+        <option value="$PROJECT_DIR$/src/flask_app/templates/all_links.html" />
+        <option value="$PROJECT_DIR$/src/flask_app/templates/index.html" />
+        <option value="$PROJECT_DIR$/src/flask_app/audio/__init__.py" />
+        <option value="$PROJECT_DIR$/src/flask_app/audio/audio.py" />
+        <option value="$PROJECT_DIR$/src/flask_app/flask_app.py" />
+        <option value="$PROJECT_DIR$/src/flask_app/audio.py" />
+        <option value="$PROJECT_DIR$/src/flask_app/app.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-10" />
-    <option name="y" value="-10" />
-    <option name="width" value="1939" />
-    <option name="height" value="1049" />
+    <option name="x" value="1275" />
+    <option name="y" value="-5" />
+    <option name="width" value="1936" />
+    <option name="height" value="1176" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -231,7 +260,7 @@
               <item name="diurisation-pet-proj" type="b2602c69:ProjectViewProjectNode" />
               <item name="diurisation-pet-proj" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="vggvoxvlad" type="462c0819:PsiDirectoryNode" />
+              <item name="flask_app" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -240,20 +269,22 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="Python" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/prepare_vox_celeb1_filelist.py" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Repos\diurisation-pet-proj\src\flask_app" />
+      <recent name="D:\Repos\diurisation-pet-proj\src" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Repos\diurisation-pet-proj\src\flask_app" />
       <recent name="D:\Repos\diurisation-pet-proj\src\flask_app\audio" />
       <recent name="D:\Repos\diurisation-pet-proj\src" />
       <recent name="D:\Repos\diurisation-pet-proj\notebooks" />
       <recent name="D:\Repos\diurisation-pet-proj\src\vggvoxvlad" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Repos\diurisation-pet-proj\src" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -268,7 +299,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.mic_recorder">
+  <component name="RunManager" selected="Python.flask_app">
     <configuration default="true" type="BashConfigurationType" factoryName="Bash">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="INTERPRETER_PATH" value="" />
@@ -278,27 +309,6 @@
       <option name="SCRIPT_NAME" value="bokeh serve --show myapp.py" />
       <option name="PARAMETERS" value="" />
       <module name="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="bokeh-visual (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="diurisation-pet-proj" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/bokeh-visual.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
     <configuration name="bokeh-visual" type="PythonConfigurationType" factoryName="Python" temporary="true">
@@ -315,6 +325,27 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$USER_HOME$/AppData/Local/Continuum/anaconda3/envs/pyBK/Scripts/bokeh.exe" />
       <option name="PARAMETERS" value="serve --show D:\Repos\diurisation-pet-proj\src\bokeh-visual.py" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="flask_app" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="diurisation-pet-proj" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/flask_app" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="D:\Repos\diurisation-pet-proj\src\flask_app\app.py" />
+      <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -355,7 +386,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/flask_app/mic_recorder.py" />
+      <option name="SCRIPT_NAME" value="D:\Repos\diurisation-pet-proj\src\flask_app\app.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -409,18 +440,18 @@
     <list>
       <item itemvalue="Python.test_diarisation" />
       <item itemvalue="Python.bokeh-visual" />
-      <item itemvalue="Python.bokeh-visual (1)" />
       <item itemvalue="Python.test_split" />
       <item itemvalue="Python.mic" />
       <item itemvalue="Python.mic_recorder" />
+      <item itemvalue="Python.flask_app" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.flask_app" />
         <item itemvalue="Python.mic_recorder" />
         <item itemvalue="Python.mic" />
         <item itemvalue="Python.bokeh-visual" />
         <item itemvalue="Python.test_split" />
-        <item itemvalue="Python.bokeh-visual (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -438,15 +469,15 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="1275" y="-5" width="1936" height="1176" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.32550335" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.26066098" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32962447" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3504868" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.20738636" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.34469697" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -722,16 +753,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/player.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1012">
-          <caret line="45" column="4" selection-start-line="45" selection-start-column="4" selection-end-line="46" selection-end-column="38" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/src/flask_app/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/vggvoxvlad/mic.py" />
     <entry file="file://$PROJECT_DIR$/test_split.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="989">
@@ -749,6 +774,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/flask_app/audio/templates/audio/main.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="19" column="45" lean-forward="true" selection-start-line="19" selection-start-column="45" selection-end-line="19" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test_diarisation.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="161">
@@ -759,9 +791,50 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/player.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="658">
+          <caret line="45" column="4" selection-start-line="45" selection-start-column="4" selection-end-line="46" selection-end-column="38" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/flask_app/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="19" column="23" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/flask_app/audio/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/flask_app/audio/audio.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-115">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+          <folding>
+            <element signature="e#82#91#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/flask_app/templates/all_links.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="5" column="5" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test_predictionvgg.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="874">
+        <state relative-caret-position="742">
           <caret line="40" column="76" selection-start-line="40" selection-start-column="76" selection-end-line="40" selection-end-column="76" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
@@ -769,42 +842,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/flask_app/audio/audio.py">
+    <entry file="file://$PROJECT_DIR$/src/flask_app/audio.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        <state relative-caret-position="-138">
+          <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
           <folding>
-            <element signature="e#82#91#0" expanded="true" />
+            <element signature="e#82#93#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/flask_app/audio/__init__.py">
+    <entry file="file://$PROJECT_DIR$/src/flask_app/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="21" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/flask_app/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/flask_app/mic_recorder.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="13" column="24" lean-forward="true" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
+        <state relative-caret-position="644">
+          <caret line="28" column="22" selection-start-line="28" selection-start-column="22" selection-end-line="28" selection-end-column="22" />
           <folding>
-            <element signature="e#82#92#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/vggvoxvlad/mic.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="10" column="44" lean-forward="true" selection-start-line="10" selection-start-column="44" selection-end-line="10" selection-end-column="44" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
+            <element signature="e#82#129#0" expanded="true" />
           </folding>
         </state>
       </provider>

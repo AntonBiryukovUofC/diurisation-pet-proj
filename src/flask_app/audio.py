@@ -2,20 +2,17 @@
 
 Implements server-side audio recording.
 """
-import os
-import sys
 import uuid
 import wave
 from flask import Blueprint, current_app, session, url_for, render_template
-from flask_socketio import emit
-from mic_recorder import socketio
 
 
-bp = Blueprint('audio', __name__, static_folder='static',
+audio = Blueprint('audio', __name__, static_folder='static',
                template_folder='templates')
+from app import socketio
+from flask_socketio import emit
 
-
-@bp.route('/')
+@audio.route('/')
 def index():
     """Return the client application."""
     return render_template('audio/main.html')

@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>SocketIO Examples</title>
+        <title>Celebrity Voice similarity App</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <style>
             p {
@@ -9,8 +9,19 @@
         </style>
     </head>
     <body>
-        <h1>Socket.IO Examples</h1>
-        <p><a href="{{ url_for('audio.index') }}">Audio recording</a></p>
-        
+
+        <h1>Celebrity Voice similarity demo app</h1>
+
+        <h3>Select one from the two following options:</h3>
+        <p>
+        <a href="/bokeh-precalc">Explore pre-computed examples </a>
+        </p>
+        <p>
+        <a href="/bokeh">Record your own voice via microphone</a>
+        </p>
+         <p>
+        <a href="{{ url_for('all_links') }}">Record your own voice via microphone</a>
+        </p>
+
     </body>
 </html>
