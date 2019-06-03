@@ -16,10 +16,32 @@ in a sliding window fashion~~ -- done by __Dan__
 - ~~Develop an interactive web-friendly visualization~~ - done by __Anton__
 - ~~Apply Speaker Classification to `.wav` in a rolling window, get top N predictions~~ - done by __Dan__
 - Build a classifier of masculinity/femininity (could be simply an average of top 10 / N predictions' gender)
-- Wrap everything into a nice set of functions
+- ~~Wrap everything into a nice set of functions~~
+
+
+## TODOs for Anton:
+
 - Tie a microphone recording module to the visualization via Bokeh server app
 - Start working on a Flask application and think about how to deploy it 
  
+
+## TODOs for Dan:
+
+- Create a CLI wrapper for the set of scripts, that takes a path to an audiofile as an input argument, or a name of a preset `.wav` file, and launches a `bokeh` application locally on the user's machine. Rely on `click` package for settting up arguments
+
+- Create a quick `gif` animation of running the sript in the terminal - use https://github.com/faressoft/terminalizer to help you create a `gif`. Gif would show the following:
+    - Clone repo,
+    - Run CLI wrapper with a `--help` parameter, that would show some info about the script usage, as well as possible values for preset examples
+    - `ls` in the terminal for a custom `wav`
+    - Run CLI on some custom `wav` file
+
+- Clean this README, provide a nice overview of what the project does and how it achieves the goal - mention steps like:
+    - VAD for voice activation detection
+    - Speech Activity
+    - Diarization clustering
+    - VoxCeleb v1 dataset, metadata example, how the validation data was prepared (point to the right folder in the repo that has the codes, and the weights) -- this step is quite important actually, as people might be interested in downloading our weights
+    - How the embeddings and the final layer were trained
+
 
 ## What did not work
 
@@ -85,7 +107,7 @@ Project Organization
 - Create a list of dataframes using `result_list = src.vggvoxvlad.split.voxceleb1_split(path, network, split_seconds=3, n=3,win_length=400, sr=16000, hop_length=160,n_fft=512, spec_len=250, n_classes=1251)` where `path` is a `.wav` file
 - Each dataframe contains the headers `Time (s)`,     `Speaker`, `Probability`, `Country` and  `Gender`
 - Each dataframe will display the three speakers with the highest predicted probability (to change this, change the `n` parameter)
-- `voxceleb1_split()` will predict a speker every three seconds by default (to change this, change the `split_seconds` parameter)
+- `voxceleb1_split()` will predict a speaker every three seconds by default (to change this, change the `split_seconds` parameter)
 - To show a bargraph of the results, use `plot_split(result_list, num_speakers=2)` where `num_speakers` is the actual number of speakers in the `.wav` file
 
 
