@@ -9,6 +9,7 @@ from bokeh.models.widgets import Toggle
 from src.player import AudioPlayer
 from bokeh.layouts import column, row, grid
 import librosa
+from pathlib import Path
 import os
 import numpy as np
 import pandas as pd
@@ -30,11 +31,15 @@ from PIL import Image
 
 width = 1000
 height = 250
+# Retrieve the args
+args = curdoc().session_context.request.arguments
 
-base_name = 'atkinson-clarkson'
-fname = f'../data/raw/{base_name}.wav'
-fname_rttm = f'../data/processed/{base_name}/{base_name}.rttm'
-fname_speaker_id = f'../data/processed/{base_name}/{base_name}.pkl'
+project_dir = Path(__file__).resolve().parents[1]
+
+base_name = args.get('wavfile')[0].decode("utf-8")
+fname = f'{project_dir}/data/raw/{base_name}.wav'
+fname_rttm = f'{project_dir}/data/processed/{base_name}/{base_name}.rttm'
+fname_speaker_id = f'{project_dir}/data/processed/{base_name}/{base_name}.pkl'
 voxceleb_img_root = r'D:/VoxCeleb/images/'
 
 # Preload RTTM
@@ -43,7 +48,7 @@ voxceleb_img_root = r'D:/VoxCeleb/images/'
 df_prob = pd.read_pickle(fname_speaker_id).set_index('Time_s')
 
 # Preload images from VoxCeleb:
-images_list = pd.read_csv(r'../data/raw/image_list.csv')
+images_list = pd.read_csv(f'{project_dir}/data/raw/image_list.csv')
 images_list.set_index('Celeb Name', inplace=True)
 il_all = images_list.reset_index().groupby('Celeb Name').agg(pd.DataFrame.sample).loc[df_prob['Speaker']]
 img_dict = {}
@@ -77,7 +82,7 @@ print(df_small.shape)
 
 s1 = ColumnDataSource(df_small)
 s2 = ColumnDataSource({'x': [df['time'].min(), df['time'].min()], 'y': [-0.5, 0.5]})
-p = figure(plot_width=width, plot_height=height, title="Audio Waveform",
+p = figure(plot_width=width, plot_height=height, title="Sound waveform",
            toolbar_location='above', tools=[], output_backend="webgl")
 # p.circle(x='time',y={'field':'id_adjusted','transform':Jitter(width=0.1)},color={'field':'ID','transform':color_map},source = s1,fill_alpha=0.01)
 p.line(x='time', y='amplitude', source=s1)
@@ -103,13 +108,13 @@ def callback_tap(arg, s2=s2):
     image_src.data['image'] = [img]
     data_new = data_new_df.to_dict(orient='list')
     source_prob.data = data_new
-    source_prob_instant.data = df_prob_instant[cur_index].to_dict(orient='list')
+    #source_prob_instant.data = df_prob_instant[cur_index].to_dict(orient='list')
     fctrs = source_prob.data['Speaker']
     p_prob.x_range.factors = sorted(fctrs)
 
 
 def callback_play(arg):
-    p.title.text = f'{toggle.active}'
+    p.title.text = f'Sound waveform'
     if toggle.active:
         toggle.label = 'Pause'
         toggle.button_type = 'success'
@@ -121,7 +126,7 @@ def callback_play(arg):
         ap.pause()
 
 def callback_record(arg):
-    p.title.text = f'{toggle.active}'
+    p.title.text = f'Sound waveform'
     if toggle.active:
         toggle.label = 'Recording..'
         toggle.button_type = 'warning'
@@ -149,7 +154,7 @@ def update():
             image_src.data['image'] = [img]
             data_new = data_new_df.to_dict(orient='list')
             source_prob.data = data_new
-            source_prob_instant.data = df_prob_instant[cur_index].to_dict(orient='list')
+            #source_prob_instant.data = df_prob_instant[cur_index].to_dict(orient='list')
             fctrs = source_prob.data['Speaker']
             p_prob.x_range.factors = sorted(fctrs)
         else:
@@ -166,7 +171,7 @@ def update():
                     image_src.data['image'] = [img]
                     data_new = data_new_df.to_dict(orient='list')
                     source_prob.data = data_new
-                    source_prob_instant.data = df_prob_instant[cur_index].to_dict(orient='list')
+                    #source_prob_instant.data = df_prob_instant[cur_index].to_dict(orient='list')
                     fctrs = source_prob.data['Speaker']
                     p_prob.x_range.factors = list(fctrs)
 
@@ -186,13 +191,13 @@ for t in times_speakers:
 
 mapper = LinearColorMapper(palette=Spectral10, low=0, high=df_prob.index.nunique())
 
-df_subset = df_prob[df_prob.index <= 0].groupby('Speaker').last().sort_values('cumsum_prob').reset_index()
+df_subset = df_prob[df_prob.index < 0].groupby('Speaker').last().sort_values('cumsum_prob').reset_index()
 cur_index = 1
 # d.text = f' Index {cur_index} , time of the next step = {times_speakers[cur_index]} '
 
 
 source_prob = ColumnDataSource(data=df_subset)
-source_prob_instant = ColumnDataSource(data=df_prob_instant[0])
+#source_prob_instant = ColumnDataSource(data=df_prob_instant[0])
 
 img = np.flipud(img_dict['Empty'])
 (xdim, ydim) = img.shape
@@ -211,8 +216,8 @@ p_prob.xaxis.major_label_orientation = 3.14 / 4
 p_prob.vbar(x='Speaker', top='cumsum_prob', fill_color={'field': 'cumsum_prob', 'transform': mapper}, width=0.5,
             source=source_prob)
 
-p_prob.vbar(x='Speaker', top='Probability', fill_color=Category10[3][2],
-            source=source_prob_instant,fill_alpha=0.8,width=0.3)
+# p_prob.vbar(x='Speaker', top='Probability', fill_color=Category10[3][2],
+#             source=source_prob_instant,fill_alpha=0.8,width=0.3)
 p_face.image('image', x=0, y=0, dw=xdim, dh=ydim, source=image_src)
 
 ####
@@ -223,3 +228,5 @@ p.on_event('tap', callback_tap)
 toggle.on_click(callback_play)
 # put the button and plot in a layout and add to the document
 curdoc().add_root(grid(column(toggle, p, row(p_prob, p_face))))
+
+

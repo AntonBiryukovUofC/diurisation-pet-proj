@@ -57,3 +57,12 @@ p {
     #controls { flex-direction: column; height: 100%; width: 10%;}
     #viz { height: 100%; width: 90%;}
 }
+
+
+div#loading {
+    width: 35px;
+    height: 35px;
+    display: none;
+    background: url(/static/ajax-loader.gif) no-repeat;
+    cursor: wait;
+    }

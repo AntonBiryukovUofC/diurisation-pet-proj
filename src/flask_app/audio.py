@@ -5,24 +5,28 @@ Implements server-side audio recording.
 import uuid
 import wave
 from flask import Blueprint, current_app, session, url_for, render_template
+from flask_socketio import emit
 
 
 audio = Blueprint('audio', __name__, static_folder='static',
                template_folder='templates')
 from app import socketio
-from flask_socketio import emit
 
 @audio.route('/')
 def index():
     """Return the client application."""
+    print('hello!')
     return render_template('audio/main.html')
 
 
 @socketio.on('start-recording', namespace='/audio')
 def start_recording(options):
+    print('Hello WORLD!')
+
     """Start recording audio from the client."""
     id = uuid.uuid4().hex  # server-side filename
     session['wavename'] = id + '.wav'
+    print(current_app.config['FILEDIR'] + session['wavename'])
     wf = wave.open(current_app.config['FILEDIR'] + session['wavename'], 'wb')
     wf.setnchannels(options.get('numChannels', 1))
     wf.setsampwidth(options.get('bps', 16) // 8)

@@ -40,11 +40,13 @@ function toggleRecording( e ) {
         // stop recording
         e.classList.remove('recording');
         recording = false;
+        alert('Done recording!');
         socketio.emit('end-recording');
     } else {
         // start recording
         e.classList.add('recording');
         recording = true;
+
         socketio.emit('start-recording', {numChannels: 1, bps: 16, fps: parseInt(audioContext.sampleRate)});
     }
 }
