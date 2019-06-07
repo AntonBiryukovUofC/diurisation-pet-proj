@@ -1,12 +1,24 @@
 html { overflow: hidden; }
 body { 
-    font: 14pt Arial, sans-serif; 
-    background: lightgrey;
+}
+.viz-canvas {
+display: flex;
+width: 80%;}
+.container {
+    width: 80%;
     display: flex;
     flex-direction: column;
-    height: 100vh;
-    width: 100%;
-    margin: 0 0;
+    margin: 0 auto;
+    align-items: left;
+}
+.wavedisp-canvas {
+display: flex;
+flex-direction: column;}
+.wave-controls {
+display: flex;
+}
+.viz_controls {
+    display: 80%;
 }
 p {
     margin: 2px;
@@ -15,16 +27,18 @@ p {
     display: inline-block; 
     background: #202020; 
     width: 95%;
-    height: 45%;
+    height: 95%;
     box-shadow: 0px 0px 10px blue;
 }
 #wavedisplay { 
     display: inline-block; 
-    background: #ffffff;
-    overflow-y: scroll;
     width: 95%;
-    height: 45%;
-    box-shadow: 0px 0px 10px blue;
+    height: 8.5%;
+}
+#audio {
+display:flex;
+width: 100%;
+height: 100%;
 }
 #controls {
     display: flex;
@@ -33,13 +47,32 @@ p {
     justify-content: space-around;
     height: 20%;
     width: 100%;
+    font-size: 32px;
+
 }
-#record { height: 15vh; }
+#record {     cursor: pointer;
+    align-items: center;
+    display: inline-block;
+    font-size: 120px;
+    /* line-height: 50px; */
+    /* background-color: black; */
+    /* color: white; */
+    /* width: 50px; */
+    /* height: 50px; */
+    text-align: center;
+    vertical-align: bottom;
+}
+#process {
+ height: 15vh;
+ font-size: 90px;
+ cursor: pointer;
+          }
+
 #record.recording { 
     background: red;
-    background: -webkit-radial-gradient(center, ellipse cover, #ff0000 0%,lightgrey 75%,lightgrey 100%,#7db9e8 100%); 
-    background: -moz-radial-gradient(center, ellipse cover, #ff0000 0%,lightgrey 75%,lightgrey 100%,#7db9e8 100%); 
-    background: radial-gradient(center, ellipse cover, #ff0000 0%,lightgrey 75%,lightgrey 100%,#7db9e8 100%); 
+    background: -webkit-radial-gradient(center, ellipse cover, #ff0000 0%,#ffffff 75%,#ffffff 100%,#ff0000 100%);
+    background: -moz-radial-gradient(center, ellipse cover, #ff0000 0%,#ffffff 75%,#ffffff 100%,#ff0000 100%);
+    background: radial-gradient(center, ellipse cover, #ff0000 0%,#ffffff 75%,#ffffff 100%,#ff0000 100%);
 }
 #save, #save img { height: 10vh; }
 #save { opacity: 0.25;}
@@ -49,11 +82,13 @@ p {
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
+    justify-content: left;
+
 }
 @media (orientation: landscape) {
     body { flex-direction: row;}
-    #controls { flex-direction: column; height: 100%; width: 10%;}
+    #controls { flex-direction: column; height: 100%; width: 25%;}
     #viz { height: 100%; width: 90%;}
 }
+
+

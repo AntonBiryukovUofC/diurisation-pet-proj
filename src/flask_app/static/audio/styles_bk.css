@@ -1,0 +1,87 @@
+html { overflow: hidden; }
+body { 
+    font: 14pt Arial, sans-serif;
+    color: white;
+    background: #4d4d4d;
+    display: flex;
+    height: 100vh;
+    width: 100%;
+
+}
+.viz-canvas {
+display: flex;
+width: 80%;}
+.container {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+.wavedisp-canvas {
+display: flex;
+flex-direction: column;}
+.wave-controls {
+display: flex;
+}
+.viz_controls {
+    display: 80%;
+}
+p {
+    margin: 2px;
+}
+#analyser { 
+    display: inline-block; 
+    background: #202020; 
+    width: 95%;
+    height: 95%;
+    box-shadow: 0px 0px 10px blue;
+}
+#wavedisplay { 
+    display: inline-block; 
+    width: 95%;
+    height: 8.5%;
+}
+#audio {
+display:flex;
+width: 100%;
+height: 100%;
+}
+#controls {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    height: 20%;
+    width: 100%;
+
+}
+#record { height: 15vh;
+          font-size: 90px;}
+#process {
+ height: 15vh;
+ font-size: 90px;
+ cursor: pointer;
+          }
+
+#record.recording { 
+    background: red;
+    background: -webkit-radial-gradient(center, ellipse cover, #ff0000 0%,lightgrey 75%,lightgrey 100%,#7db9e8 100%); 
+    background: -moz-radial-gradient(center, ellipse cover, #ff0000 0%,lightgrey 75%,lightgrey 100%,#7db9e8 100%); 
+    background: radial-gradient(center, ellipse cover, #ff0000 0%,lightgrey 75%,lightgrey 100%,#7db9e8 100%); 
+}
+#save, #save img { height: 10vh; }
+#save { opacity: 0.25;}
+#save[download] { opacity: 1;}
+#viz {
+    height: 80%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+@media (orientation: landscape) {
+    body { flex-direction: row;}
+    #controls { flex-direction: column; height: 100%; width: 25%;}
+    #viz { height: 100%; width: 90%;}
+}

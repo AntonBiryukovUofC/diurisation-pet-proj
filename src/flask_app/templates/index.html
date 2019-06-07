@@ -1,32 +1,33 @@
-<html>
-    <head>
-        <title>Celebrity Voice similarity App</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <style>
-            p {
-                font-size: 150%;
-            }
-        </style>
-    </head>
-    <body>
+<!DOCTYPE html>
 
-        <h1>Celebrity Voice similarity demo app</h1>
+{% extends "bootstrap/base.html" %}
+    {% block head %}
+        {{super()}}
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
+        <meta charset="UTF-8">
+    {% endblock %}
 
-        <h3>Select one from the two following options:</h3>
-        <p>
-        <a href="/bokeh-precalc/galifianakis">Explore pre-computed examples - Galifianakis </a>
-        </p>
-        <p>
-        <a href="/bokeh-precalc/carell">Explore pre-computed examples - Carell </a>
-        </p>
-        <p>
-        <a href="/bokeh-precalc/office">Explore pre-computed examples - Office </a>
-        </p>
 
-         <p>
-        <a href="{{ url_for('index_audio') }}">Record your own voice via microphone</a>
-        </p>
+    {% block body %}
 
-    </body>
-</html>
+        {% block navbar %}
+        {{nav.mynavbar.render(renderer='darknav')}}
+        {% endblock %}
 
+        {% block content %}
+
+
+                <div class="container">
+                <h1>Select one from the following options:</h1>
+
+                <a class="btn btn-primary" href="/bokeh-precalc/galifianakis">Zach Galifianakis example</a>
+
+                <a class="btn btn-primary" href="/bokeh-precalc/carell"> Steven Carell example </a>
+
+                <a class="btn btn-primary" href="/bokeh-precalc/office"> Rainn Wilson example (?)</a>
+                </div>
+        {% endblock %}
+    {% endblock %}

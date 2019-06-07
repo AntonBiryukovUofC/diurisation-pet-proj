@@ -28,11 +28,13 @@ var analyserContext = null;
 var canvasWidth, canvasHeight;
 var socketio = io.connect(location.origin + '/audio', {transports: ['websocket']});
 
+
 socketio.on('add-wavefile', function(url) {
     // add new recording to page
     audio = document.createElement('p');
-    audio.innerHTML = '<audio src="' + url + '" controls>';
-    document.getElementById('wavefiles').appendChild(audio);
+    audio.innerHTML = '<audio src="' + url + '" controls id = "audio">';
+    document.getElementById('remove').parentNode.removeChild(document.getElementById('remove'));
+    document.getElementById('wavefiles').replaceChild(audio,document.getElementById('wavefiles').firstChild);
 });
 
 function toggleRecording( e ) {

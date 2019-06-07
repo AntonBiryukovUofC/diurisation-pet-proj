@@ -1,22 +1,72 @@
 <!DOCTYPE html>
-<html>
-    <head>
+
+{% extends "bootstrap/base.html" %}
+
+    {% block head %}
+        {{super()}}
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+        <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
+        <meta charset="UTF-8">
         <link rel="stylesheet" href="{{ url_for('static', filename='audio/styles.css') }}">
-    </head>
-    <body>
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+
+    {% endblock %}
+
+    {% block body %}
+    {% block navbar %}
+        {{nav.mynavbar.render(renderer = 'darknav')}}
+    {% endblock %}
+
+    {% block content %}
+
+    <div class="container">
+        <h4> You can first test the microphone (if it works, you 'll see visualization) </h4>
+        <h4> Then you can play your record, and if you dont like, you can record it again </h4>
+        <h4> Finally, when you're done, click the impatient robot icon below the 🎤 to see which celebrity you sound alike. </h4>
+
+        <p> </p>
+
+
         <div id="viz">
-            <canvas id="analyser" width="1024" height="500"></canvas>
-            <div id="wavedisplay">
+            <div class="viz-canvas">
+
+            <div class="wavedisp-canvas">
+            <canvas id="analyser" width="500" height="500"></canvas>
+<div id="wavedisplay">
+
                 <div id="wavefiles">
+                    <audio src="bs" controls id= "remove"></audio>
                 </div>
             </div>
+                </div>
+            <div id="controls">
+            <i id = 'record' class="fa fa-microphone fa-5x" onclick="toggleRecording(this);"></i>
+            <img src="{{ url_for('static', filename='bot.gif') }}" id="process" onclick="toggleRecording(this);">
+
+
+
+
+
+
+
         </div>
-        <div id="controls">
-            <img id="record" src="{{ url_for('static', filename='audio/mic128.png') }}" onclick="toggleRecording(this);">
+</div>
+
+
+            <div class="wave">
+
+
+            </div>
+
         </div>
+
+
+        </div>
+
         <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.slim.js"></script>
         <script src="{{ url_for('static', filename='audio/main.js') }}"></script>
-    </body>
-</html>
+    {% endblock %}
+
+    {% endblock %}

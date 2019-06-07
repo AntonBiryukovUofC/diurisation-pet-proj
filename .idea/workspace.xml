@@ -5,16 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6537a4af-c771-4bc8-bc27-ff747be3ce66" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/markdown-navigator.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/markdown-navigator/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/flask_app/static/ajax-loader.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/flask_app/static/audio/styles_bk.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bokeh-visual.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/bokeh-visual.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/flask_app/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/flask_app/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/flask_app/audio.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/flask_app/audio.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/flask_app/static/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/flask_app/static/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/flask_app/static/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/flask_app/static/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/flask_app/static/_files/472c7e6a4b2a46088c59f0063f685113.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/flask_app/static/_files/4b2c52cca5f94dd29c9bf3594feb4c74.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/flask_app/static/_files/59aaba8d25c748c1baf437df0a5970fd.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/flask_app/static/_files/8ef598412edf476faef5b53f94dfa680.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/flask_app/static/_files/a45b72ebd5514c42b5f8edb7db583fc0.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/flask_app/static/_files/abdeff8a704648ed89219ddeea56d892.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/flask_app/static/_files/b2f90ea91c0e4037b20a718ce0fef145.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/flask_app/static/_files/b343594314514c87990a5aa816f1bffc.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/flask_app/static/_files/b7f389ab47dd4c4fba676801be45e32e.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/flask_app/static/_files/c41b891660b043ef9b0dc65518ccf4ef.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/flask_app/static/_files/d745419872e146268d87cbcbd5ab8632.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/flask_app/static/_files/e725c5b05a5742d692f474430e518cd1.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/flask_app/static/_files/e9772135ed5a453abbf6ba259a308f82.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/flask_app/static/_files/f6e3147b707c4baba58147a96cab6caa.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/flask_app/static/audio/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/flask_app/static/audio/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/flask_app/static/audio/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/flask_app/static/audio/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/flask_app/static/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/flask_app/static/styles.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/flask_app/templates/audio/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/flask_app/templates/audio/main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/flask_app/templates/bokeh_template.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/flask_app/templates/bokeh_template.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/flask_app/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/flask_app/templates/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -33,31 +46,33 @@
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.3" value="2" />
           <entry key="project.open.time.4" value="2" />
+          <entry key="project.open.time.5" value="1" />
           <entry key="project.open.time.6" value="1" />
-          <entry key="project.opened" value="12" />
+          <entry key="project.opened" value="13" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CSS" value="1" />
-          <entry key="HTML" value="7" />
+          <entry key="CSS" value="4" />
+          <entry key="HTML" value="9" />
           <entry key="IPNB" value="8" />
-          <entry key="JavaScript" value="3" />
+          <entry key="Image" value="1" />
+          <entry key="JavaScript" value="4" />
           <entry key="Markdown" value="2" />
           <entry key="PLAIN_TEXT" value="2" />
-          <entry key="Python" value="51" />
+          <entry key="Python" value="52" />
           <entry key="Scratch" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CSS" value="13" />
-          <entry key="HTML" value="527" />
+          <entry key="CSS" value="636" />
+          <entry key="HTML" value="2614" />
           <entry key="Ini" value="10" />
-          <entry key="JavaScript" value="27" />
+          <entry key="JavaScript" value="150" />
           <entry key="Markdown" value="2143" />
           <entry key="PLAIN_TEXT" value="142" />
-          <entry key="Python" value="11607" />
+          <entry key="Python" value="12048" />
           <entry key="Scratch" value="35" />
         </counts>
       </usages-collector>
@@ -68,8 +83,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/flask_app/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="443">
-              <caret line="48" column="91" selection-start-line="48" selection-start-column="91" selection-end-line="48" selection-end-column="91" />
+            <state relative-caret-position="2651">
+              <caret line="120" column="55" selection-start-line="120" selection-start-column="55" selection-end-line="120" selection-end-column="55" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -77,31 +92,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/bokeh-visual.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="50" column="67" lean-forward="true" selection-start-line="50" selection-start-column="67" selection-end-line="50" selection-end-column="67" />
-              <folding>
-                <element signature="e#0#10#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/flask_app/templates/bokeh_template.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/flask_app/audio.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
+            <state>
               <caret line="9" selection-start-line="9" selection-end-line="9" />
               <folding>
                 <element signature="e#82#93#0" expanded="true" />
@@ -111,19 +105,28 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/flask_app/static/main.js">
+        <entry file="file://$PROJECT_DIR$/src/flask_app/templates/bokeh_template.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="397">
-              <caret line="31" column="32" selection-start-line="31" selection-start-column="32" selection-end-line="31" selection-end-column="32" />
+            <state relative-caret-position="604">
+              <caret line="53" column="5" lean-forward="true" selection-start-line="53" selection-start-column="5" selection-end-line="53" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/flask_app/templates/audio/main.html">
+        <entry file="file://$PROJECT_DIR$/src/flask_app/static/audio/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="115">
-              <caret line="5" column="49" selection-start-line="5" selection-start-column="49" selection-end-line="5" selection-end-column="49" />
+            <state>
+              <caret column="57" lean-forward="true" selection-start-column="57" selection-end-column="57" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/flask_app/templates/about.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="368">
+              <caret line="16" column="22" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -131,40 +134,33 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/flask_app/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
-              <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+            <state relative-caret-position="138">
+              <caret line="6" column="8" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/flask_app/static/styles.css">
+        <entry file="file://$PROJECT_DIR$/src/flask_app/static/audio/styles.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1129">
-              <caret line="66" column="17" lean-forward="true" selection-start-line="66" selection-start-column="17" selection-end-line="66" selection-end-column="17" />
+            <state relative-caret-position="213">
+              <caret line="74" column="98" selection-start-line="74" selection-start-column="98" selection-end-line="74" selection-end-column="98" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/flask_app/templates/audio/main.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="713">
+              <caret line="31" column="22" lean-forward="true" selection-start-line="31" selection-start-column="22" selection-end-line="31" selection-end-column="22" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/vggvoxvlad/split.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="483">
-              <caret line="26" column="81" selection-start-line="26" selection-start-column="81" selection-end-line="26" selection-end-column="81" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test_diarisation.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="11" column="44" selection-start-line="11" selection-start-column="44" selection-end-line="11" selection-end-column="44" />
-              <folding>
-                <element signature="e#0#12#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/src/flask_app/static/audio/styles_bk.css">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -193,6 +189,9 @@
       <find>write</find>
       <find>source_prob_in</find>
       <find>title</find>
+      <find>image_li</find>
+      <find>add-</find>
+      <find>med</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -231,14 +230,17 @@
         <option value="$PROJECT_DIR$/src/flask_app/audio/__init__.py" />
         <option value="$PROJECT_DIR$/src/flask_app/audio/audio.py" />
         <option value="$PROJECT_DIR$/src/flask_app/flask_app.py" />
-        <option value="$PROJECT_DIR$/src/flask_app/templates/bokeh_template.html" />
-        <option value="$PROJECT_DIR$/src/flask_app/static/main.js" />
         <option value="$PROJECT_DIR$/src/flask_app/audio.py" />
-        <option value="$PROJECT_DIR$/src/flask_app/templates/audio/main.html" />
         <option value="$PROJECT_DIR$/src/flask_app/static/styles.css" />
-        <option value="$PROJECT_DIR$/src/flask_app/templates/index.html" />
-        <option value="$PROJECT_DIR$/src/flask_app/app.py" />
         <option value="$PROJECT_DIR$/src/bokeh-visual.py" />
+        <option value="$PROJECT_DIR$/src/flask_app/static/main.js" />
+        <option value="$PROJECT_DIR$/src/flask_app/static/audio/main.js" />
+        <option value="$PROJECT_DIR$/src/flask_app/app.py" />
+        <option value="$PROJECT_DIR$/src/flask_app/templates/about.html" />
+        <option value="$PROJECT_DIR$/src/flask_app/templates/bokeh_template.html" />
+        <option value="$PROJECT_DIR$/src/flask_app/templates/index.html" />
+        <option value="$PROJECT_DIR$/src/flask_app/static/audio/styles.css" />
+        <option value="$PROJECT_DIR$/src/flask_app/templates/audio/main.html" />
       </list>
     </option>
   </component>
@@ -253,6 +255,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -289,7 +292,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -299,15 +301,15 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Repos\diurisation-pet-proj\src\flask_app" />
+      <recent name="D:\Repos\diurisation-pet-proj\src" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Repos\diurisation-pet-proj\src\flask_app\static\audio" />
       <recent name="D:\Repos\diurisation-pet-proj\src\flask_app\static" />
       <recent name="D:\Repos\diurisation-pet-proj\src\flask_app" />
       <recent name="D:\Repos\diurisation-pet-proj\src\flask_app\audio" />
-      <recent name="D:\Repos\diurisation-pet-proj\src" />
-      <recent name="D:\Repos\diurisation-pet-proj\notebooks" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Repos\diurisation-pet-proj\src\flask_app" />
       <recent name="D:\Repos\diurisation-pet-proj\src" />
     </key>
   </component>
@@ -493,10 +495,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1530" y="-6" width="1936" height="1176" extended-state="6" />
+    <frame x="1912" y="-8" width="1936" height="1176" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26026666" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.10346667" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -514,7 +516,7 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Key Promoter X" order="3" />
-      <window_info active="true" anchor="right" x="0" y="0" width="337" height="638" id="Documentation" order="4" side_tool="true" visible="true" weight="0.3283582" />
+      <window_info anchor="right" x="0" y="0" width="337" height="638" id="Documentation" order="4" side_tool="true" weight="0.3283582" />
     </layout>
     <layout-to-restore>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26066098" />
@@ -570,42 +572,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="13" column="18" lean-forward="true" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/notebooks/diarization_tests.ipynb">
-      <provider selected="true" editor-type-id="ipnb-editor">
-        <state>
-          <selected id="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/audioplayer.py" />
-    <entry file="file://$USER_HOME$/AppData/Local/Continuum/anaconda3/envs/pyBK/Lib/site-packages/matplotlib/pyplot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="1478" selection-start-line="1478" selection-end-line="1478" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Continuum/anaconda3/envs/pyBK/Lib/site-packages/matplotlib/backends/backend_qt5.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="1128" selection-start-line="1128" selection-end-line="1128" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/config.ini">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2392">
-          <caret line="104" column="37" selection-start-line="104" selection-start-column="37" selection-end-line="104" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/tool/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -779,9 +745,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1012">
           <caret line="45" column="4" selection-start-line="45" selection-start-column="4" selection-end-line="46" selection-end-column="38" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -789,9 +752,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="874">
           <caret line="40" column="76" selection-start-line="40" selection-start-column="76" selection-end-line="40" selection-end-column="76" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -802,13 +762,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/bokeh-visual.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2185">
+          <caret line="99" column="18" selection-start-line="99" selection-start-column="18" selection-end-line="99" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test_diarisation.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
+        <state relative-caret-position="161">
           <caret line="11" column="44" selection-start-line="11" selection-start-column="44" selection-end-line="11" selection-end-column="44" />
           <folding>
             <element signature="e#0#12#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/flask_app/static/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/flask_app/static/styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1518">
+          <caret line="66" column="17" selection-start-line="66" selection-start-column="17" selection-end-line="66" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -819,54 +803,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/flask_app/static/styles.css">
+    <entry file="file://$USER_HOME$/AppData/Local/Continuum/anaconda3/envs/pyBK/Lib/site-packages/flask_nav/elements.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1129">
-          <caret line="66" column="17" lean-forward="true" selection-start-line="66" selection-start-column="17" selection-end-line="66" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/flask_app/static/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="397">
-          <caret line="31" column="32" selection-start-line="31" selection-start-column="32" selection-end-line="31" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/flask_app/templates/audio/main.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="5" column="49" selection-start-line="5" selection-start-column="49" selection-end-line="5" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/flask_app/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+        <state relative-caret-position="-152">
+          <caret line="107" column="6" selection-start-line="107" selection-start-column="6" selection-end-line="107" selection-end-column="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/flask_app/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="443">
-          <caret line="48" column="91" selection-start-line="48" selection-start-column="91" selection-end-line="48" selection-end-column="91" />
+        <state relative-caret-position="2651">
+          <caret line="120" column="55" selection-start-line="120" selection-start-column="55" selection-end-line="120" selection-end-column="55" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/flask_app/static/ajax-loader.gif">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/flask_app/templates/bokeh_template.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        <state relative-caret-position="604">
+          <caret line="53" column="5" lean-forward="true" selection-start-line="53" selection-start-column="5" selection-end-line="53" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/flask_app/audio.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
+        <state>
           <caret line="9" selection-start-line="9" selection-end-line="9" />
           <folding>
             <element signature="e#82#93#0" expanded="true" />
@@ -874,13 +840,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/bokeh-visual.py">
+    <entry file="file://$PROJECT_DIR$/src/flask_app/static/audio/styles_bk.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/flask_app/static/audio/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="50" column="67" lean-forward="true" selection-start-line="50" selection-start-column="67" selection-end-line="50" selection-end-column="67" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
+        <state>
+          <caret column="57" lean-forward="true" selection-start-column="57" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/flask_app/static/audio/styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="74" column="98" selection-start-line="74" selection-start-column="98" selection-end-line="74" selection-end-column="98" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/flask_app/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="6" column="8" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/flask_app/templates/about.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="16" column="22" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/flask_app/templates/audio/main.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="713">
+          <caret line="31" column="22" lean-forward="true" selection-start-line="31" selection-start-column="22" selection-end-line="31" selection-end-column="22" />
         </state>
       </provider>
     </entry>
