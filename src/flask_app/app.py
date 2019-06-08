@@ -1,10 +1,11 @@
 import uuid
 import wave
+import os
 
 from bokeh.embed import server_document
-from flask import Flask
+from flask import Flask,flash
 from flask import request,jsonify
-from flask import current_app, session, url_for, render_template
+from flask import current_app, session, url_for, render_template,redirect
 from flask_bootstrap import Bootstrap
 from flask_debugtoolbar import DebugToolbarExtension
 from flask_socketio import SocketIO
@@ -13,13 +14,6 @@ import subprocess
 import atexit
 from flask_nav import Nav,register_renderer
 from flask_nav.elements import Navbar, View,Separator,Subgroup
-from flask_bootstrap.nav import BootstrapRenderer
-
-class DarkNavBar(BootstrapRenderer):
-    def visit_Navbar(self, node):
-        nav_tag = super(DarkNavBar, self).visit_Navbar(node)
-        nav_tag['class'] = "navbar navbar-inverse"
-        return nav_tag
 
 
 nav = Nav()
@@ -28,6 +22,7 @@ nav = Nav()
 app = Flask(__name__)
 app.config['FILEDIR'] = 'static/_files/'
 app.config['SECRET_KEY'] = 'hello'
+app.config['DEBUG_TB_INTERCEPT_REDIRECTS'] = False
 app.debug = True
 #app.register_blueprint(audio,url_prefix='/audio')
 
@@ -68,6 +63,27 @@ def bokeh_precalc(wavfile):
     script = server_document(url="http://localhost:5006/bokeh-visual",arguments={'wavfile':wavfile})
     return render_template('bokeh_template.html',bokeh_script = script)
 
+@app.route("/bokeh-user")
+def bokeh_user():
+    from pathlib import Path
+    import os
+    print('hello from bokeh-user!')
+    sname = session.get('wavename','empty')
+    pth_str = url_for('static', filename='_files/' + sname)[1:]
+    pth = Path(pth_str)
+    print(type(pth_str))
+    print(os.path.isfile(pth_str))
+    if pth.is_file():
+        print(f'All good, file exists {pth_str}')
+        script = server_document(url="http://localhost:5006/bokeh-visual", arguments={'wavfile': sname})
+        return render_template('bokeh_template.html', bokeh_script=script)
+
+    else:
+        print(f'The path does not exist {pth_str}')
+        flash('No user file exists..Did you forget to press the record button (mic) first ?','danger')
+        return redirect(url_for('index_audio'))
+
+
 @app.route("/get_my_ip", methods=["GET"])
 def get_my_ip():
     #print(type(request.remote_addr))
@@ -77,18 +93,18 @@ def get_my_ip():
 @app.route('/audio')
 def index_audio():
     """Return the client application."""
-    print('hello!')
+    id = uuid.uuid4().hex
+    session['wavename'] = id + '.wav'
     return render_template('audio/main.html')
 
 @socketio.on('start-recording', namespace='/audio')
 def start_recording(options):
     print('Hello WORLD!')
-
+    flash('Started recording...', 'primary')
     """Start recording audio from the client."""
     #id = uuid.uuid4().hex  # server-side filename
     # Generate ID from IP:
-    id = request.remote_addr
-    session['wavename'] = id + '.wav'
+    #id = request.remote_addr
     print(current_app.config['FILEDIR'] + session['wavename'])
     wf = wave.open(current_app.config['FILEDIR'] + session['wavename'], 'wb')
     wf.setnchannels(options.get('numChannels', 1))
@@ -110,26 +126,18 @@ def end_recording():
                                  filename='_files/' + session['wavename']))
     print(session['wavename'])
     session['wavefile'].close()
-    del session['wavefile']
-    del session['wavename']
+    flash('Finished recording...', 'success')
 
-@nav.navigation()
-def mynavbar():
-    return Navbar(
-        'Celebrity Voice Recognition Demo',
-        View('Explore examples', 'index'),
-        View('Test with your own voice','index_audio'),
-        View('About', 'about')
-    )
+    del session['wavefile']
+
 
 
 
 
 if __name__ == '__main__':
-
+    #print(os.path.isfile('static/_files/tmp.wav'))
     nav.init_app(app)
-    register_renderer(app,'darknav',DarkNavBar)
     socketio.run(app,debug=True)
-    #app.run(debug=True)
+    app.run(debug=True)
 
 

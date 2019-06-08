@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {% block head %}
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    {% block styles %}
+    <!-- Bootstrap CSS -->
+    {{ bootstrap.load_css() }}
+    {% endblock %}
+
+    <title>Celebrity voice recognition demo</title>
+    {% endblock %}
+  </head>
+  <body>
+    <!-- Your page content -->
+  {% from 'bootstrap/nav.html' import render_nav_item %}
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand bg-dark" href="#">Celebrity Voice recognition demo</a>
+
+    <div class="navbar-nav mr-auto">
+        {{ render_nav_item('index', 'Explore examples') }}
+        {{ render_nav_item('index_audio', 'Test with your own voice',badge='Mic required') }}
+        {{ render_nav_item('about', 'About') }}
+    </div>
+    </nav>
+
+
+
+
+    {% block content %}
+
+    {% endblock %}
+
+    {% block scripts %}
+    <!-- Optional JavaScript -->
+    {{ bootstrap.load_js() }}
+    {% endblock %}
+  </body>
+</html>

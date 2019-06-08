@@ -1,6 +1,8 @@
-<html>
-<head>
-    <title>Bokeh Visual with precalculated Waveforms</title>
+{% extends "base.html" %}
+{% block head %}
+<title> Bokeh Visual with precalculated Waveforms</title>
+{% block styles %}
+{{super()}}
 <style>
 @import url(http://fonts.googleapis.com/css?family=Amatic+SC:700);
 body{
@@ -41,19 +43,21 @@ align-items: center;
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
-
-
-
 </style>
 
-</head>
-<body>
- <div id="cloader">
 
+{% endblock %}
+{% endblock %}
+
+{% block body %}
+{% block content %}
+ <div id="cloader">
      <img src="{{ url_for('static', filename='loader.gif') }}">
-     
      </div>
 {{ bokeh_script|indent(4)|safe }}
+{% endblock %}
+
+{% block scripts %}
 <script> document.getElementById("cloader").style.display = "none";</script>
-</body>
-</html>
+{% endblock %}
+{% endblock %}

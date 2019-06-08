@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-{% extends "bootstrap/base.html" %}
+{% extends "base.html" %}
 
     {% block head %}
         {{super()}}
@@ -15,55 +15,53 @@
     {% endblock %}
 
     {% block body %}
-    {% block navbar %}
-        {{nav.mynavbar.render(renderer = 'darknav')}}
-    {% endblock %}
 
     {% block content %}
 
-    <div class="container">
-        <h4> You can first test the microphone (if it works, you 'll see visualization) </h4>
-        <h4> Then you can play your record, and if you dont like, you can record it again </h4>
-        <h4> Finally, when you're done, click the impatient robot icon below the 🎤 to see which celebrity you sound alike. </h4>
-
-        <p> </p>
-
-
-        <div id="viz">
-            <div class="viz-canvas">
-
-            <div class="wavedisp-canvas">
-            <canvas id="analyser" width="500" height="500"></canvas>
-<div id="wavedisplay">
-
-                <div id="wavefiles">
-                    <audio src="bs" controls id= "remove"></audio>
-                </div>
-            </div>
-                </div>
-            <div id="controls">
-            <i id = 'record' class="fa fa-microphone fa-5x" onclick="toggleRecording(this);"></i>
-            <img src="{{ url_for('static', filename='bot.gif') }}" id="process" onclick="toggleRecording(this);">
+    <div class="container-fluid align-items-stretch">
+        <h5>You can first test the microphone (if it works, you'll see visualization)</h5>
+        <h5>Click once to start recording, click again to stop recording</h5>
+        <h5>Then you can play your record, and if you don't like, you can record it again</h5>
+        <h5>Finally, when you're done, click the impatient robot 🤖 next to 🎤 to see which celebrity you sound like.</h5>
 
 
+        <div class="row">
 
-
-
-
-
+        <div class="col-sm-6">
+        <canvas id="analyser" width="80%" height="50px"></canvas>
         </div>
+
+        <div class="col-sm-6">
+        <div id="controls">
+        <i id = 'record' class="fa fa-microphone" onclick="toggleRecording(this);"></i>
+        <a href="{{url_for('bokeh_user')}}" title=""><img src="{{ url_for('static', filename='bot-crop.gif') }}" id="process" ></a>
+        </div>
+        </div>
+        </div>
+
+        <div class="row align-content-stretch">
+        <div id="wavefiles">
+        <audio src="bs" controls id= "remove"></audio>
+        </div>
+        </div>
+
+
 </div>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+  <!-- Categories: success (green), info (blue), warning (yellow), danger (red) -->
+    {% if messages %}
+    {% for category, message in messages %}
+      <div class="alert alert-{{ category }} alert-dismissible" role="alert">
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <!-- <strong>Title</strong> --> {{ message }}
+      </div>
+    {% endfor %}
+    {% endif %}
+    {% endwith %}
 
 
-            <div class="wave">
 
 
-            </div>
-
-        </div>
-
-
-        </div>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.slim.js"></script>
         <script src="{{ url_for('static', filename='audio/main.js') }}"></script>
