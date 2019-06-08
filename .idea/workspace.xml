@@ -5,16 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6537a4af-c771-4bc8-bc27-ff747be3ce66" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/flask_app/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/flask_app/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/flask_app/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/flask_app/static/_files/127.0.0.1.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/flask_app/static/audio/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/flask_app/static/audio/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/flask_app/static/audio/styles_bk.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/flask_app/static/audio/styles_bk.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/flask_app/templates/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/flask_app/templates/about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/flask_app/templates/audio/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/flask_app/templates/audio/main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/flask_app/templates/bokeh_template.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/flask_app/templates/bokeh_template.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/flask_app/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/flask_app/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -44,7 +35,7 @@
           <entry key="IPNB" value="8" />
           <entry key="Image" value="1" />
           <entry key="JavaScript" value="4" />
-          <entry key="Markdown" value="2" />
+          <entry key="Markdown" value="3" />
           <entry key="PLAIN_TEXT" value="2" />
           <entry key="Python" value="52" />
           <entry key="Scratch" value="1" />
@@ -56,7 +47,7 @@
           <entry key="HTML" value="4345" />
           <entry key="Ini" value="10" />
           <entry key="JavaScript" value="150" />
-          <entry key="Markdown" value="2143" />
+          <entry key="Markdown" value="2241" />
           <entry key="PLAIN_TEXT" value="142" />
           <entry key="Python" value="13054" />
           <entry key="Scratch" value="35" />
@@ -87,11 +78,25 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/flask_app/templates/bokeh_template.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="460">
-              <caret line="20" column="14" lean-forward="true" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
+            <state relative-caret-position="414">
+              <caret line="18" column="10" lean-forward="true" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="161">
+                <caret line="7" column="82" selection-start-line="7" selection-start-column="82" selection-end-line="7" selection-end-column="82" />
+              </first_editor>
+              <second_editor>
+                <markdownNavigatorState />
+              </second_editor>
             </state>
           </provider>
         </entry>
@@ -211,7 +216,6 @@
         <option value="$PROJECT_DIR$/src/pybk/diarizationFunctions.py" />
         <option value="$PROJECT_DIR$/src/bokeh-visual-backup.py" />
         <option value="$PROJECT_DIR$/src/sad_diarisation_bk.py" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/vggvoxvlad/split.py" />
         <option value="$PROJECT_DIR$/test_diarisation.py" />
         <option value="$PROJECT_DIR$/test_split.py" />
@@ -238,6 +242,7 @@
         <option value="$PROJECT_DIR$/src/flask_app/templates/base.html" />
         <option value="$PROJECT_DIR$/src/flask_app/app.py" />
         <option value="$PROJECT_DIR$/src/flask_app/templates/bokeh_template.html" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -495,12 +500,12 @@
     <frame x="1912" y="-8" width="1936" height="1176" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.10453334" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.10453334" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32962447" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.20738636" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.20738636" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.34469697" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -656,7 +661,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md" />
     <entry file="file://$PROJECT_DIR$/notebooks/split_test.ipynb">
       <provider selected="true" editor-type-id="ipnb-editor">
         <state>
@@ -860,8 +864,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/flask_app/templates/bokeh_template.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="20" column="14" lean-forward="true" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
+        <state relative-caret-position="414">
+          <caret line="18" column="10" lean-forward="true" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="161">
+            <caret line="7" column="82" selection-start-line="7" selection-start-column="82" selection-end-line="7" selection-end-column="82" />
+          </first_editor>
+          <second_editor>
+            <markdownNavigatorState />
+          </second_editor>
         </state>
       </provider>
     </entry>

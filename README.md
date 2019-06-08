@@ -4,6 +4,9 @@ Run `test_diarisation.py` from the project's root folder. Speaker IDs will show 
 Name of that file, as well as a bunch of other input parameters are stored in a config file under `models/config.ini`.
 Please read it carefully as it contains a lot of information critical for understanding of the workflow.
 
+
+For Flask-app to use Bootstrap 4, install `bootstrap-flask`, not `flask-bootstrap`
+
 ## TODOs:
 
 - ~~Visualization - tie `wav`, `rttm` together, create series of pngs~~. -- done by __Anton__
