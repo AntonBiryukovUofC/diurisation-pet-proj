@@ -13,8 +13,12 @@ from flask_socketio import emit
 import subprocess
 import atexit
 from flask_nav import Nav,register_renderer
+from pathlib import Path
 from flask_nav.elements import Navbar, View,Separator,Subgroup
 
+
+project_dir = Path(__file__).resolve().parents[2]
+print(project_dir)
 
 nav = Nav()
 
@@ -75,7 +79,10 @@ def bokeh_user():
     print(os.path.isfile(pth_str))
     if pth.is_file():
         print(f'All good, file exists {pth_str}')
-        script = server_document(url="http://localhost:5006/bokeh-visual", arguments={'wavfile': sname})
+        # Move file to data/raw:
+        os.rename(pth_str,f'{project_dir}/data/raw/{sname}')
+        # Pass the name without extension
+        script = server_document(url="http://localhost:5006/bokeh-visual", arguments={'wavfile': sname.split('.')[0]})
         return render_template('bokeh_template.html', bokeh_script=script)
 
     else:

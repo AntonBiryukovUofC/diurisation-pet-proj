@@ -3,7 +3,7 @@ import sys
 from bokeh.models import Div, ColumnDataSource, LinearColorMapper
 from bokeh.palettes import Spectral10, Category10
 from bokeh.plotting import figure, curdoc
-
+from vggvoxvlad.split import run_split
 sys.path.insert(0, 'D:\\Repos\\diurisation-pet-proj')
 from bokeh.models.widgets import Toggle
 from src.player import AudioPlayer
@@ -34,13 +34,23 @@ height = 250
 # Retrieve the args
 args = curdoc().session_context.request.arguments
 
+print(args)
+
 project_dir = Path(__file__).resolve().parents[1]
 
 base_name = args.get('wavfile')[0].decode("utf-8")
+
 fname = f'{project_dir}/data/raw/{base_name}.wav'
 fname_rttm = f'{project_dir}/data/processed/{base_name}/{base_name}.rttm'
 fname_speaker_id = f'{project_dir}/data/processed/{base_name}/{base_name}.pkl'
 voxceleb_img_root = r'D:/VoxCeleb/images/'
+# Check if pickle exists - if it does not, then create one!
+if not(os.path.isfile(fname_speaker_id)):
+    result_df = run_split(weight_path=f'{project_dir}/models/vggvox/weights-09-0.923.h5', fname=fname,
+              metafile_location=f'{project_dir}/data/raw/vox1_meta.txt', split_seconds=3, shift_seconds=1)
+    output_folder = f'{project_dir}/data/processed/{base_name}'
+    os.makedirs(output_folder, exist_ok=True)
+    result_df.to_pickle(fname_speaker_id)
 
 # Preload RTTM
 #rttm_df = load_rttm(fname_rttm, min_duration=0.2)

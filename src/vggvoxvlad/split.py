@@ -98,3 +98,49 @@ def plot_split(result_list, num_speakers=2):
 
     for item in by_school.get_xticklabels():
         item.set_rotation(90)
+
+def run_split(weight_path = '../models/vggvox/weights-09-0.923.h5', fname = 'data/raw/atkinson-clarkson.wav',
+              metafile_location='data/raw/vox1_meta.txt',split_seconds = 3,shift_seconds = 1):
+    import os
+    import argparse
+    import pandas as pd
+    # gpu configuration
+    import src.tool.toolkits as toolkits
+
+
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--gpu', default='', type=str)
+    parser.add_argument('--resume', default=r'pretrained/weights.h5', type=str)
+    parser.add_argument('--data_path', default='4persons', type=str)
+    # set up network configuration.
+    parser.add_argument('--net', default='resnet34s', choices=['resnet34s', 'resnet34l'], type=str)
+    parser.add_argument('--ghost_cluster', default=2, type=int)
+    parser.add_argument('--vlad_cluster', default=8, type=int)
+    parser.add_argument('--bottleneck_dim', default=512, type=int)
+    parser.add_argument('--aggregation_mode', default='gvlad', choices=['avg', 'vlad', 'gvlad'], type=str)
+    # set up learning rate, training loss and optimizer.
+    parser.add_argument('--loss', default='softmax', choices=['softmax', 'amsoftmax'], type=str)
+    parser.add_argument('--test_type', default='normal', choices=['normal', 'hard', 'extend'], type=str)
+
+    args = parser.parse_args(args=[])
+    toolkits.initialize_GPU(args)
+    net = make_network(weight_path, args)
+    basename = os.path.splitext(os.path.basename(fname))[0]
+    output_folder = f'data/processed/{basename}'
+
+    os.makedirs(output_folder, exist_ok=True)
+    output_filename_pkl = os.path.join(output_folder, f'{basename}.pkl')
+    output_filename_csv = os.path.join(output_folder, f'{basename}.csv')
+
+    result_list = voxceleb1_split(path=fname, network=net,metafile_location=metafile_location,
+                                       split_seconds=split_seconds,
+                                       shift_seconds=shift_seconds)
+    result_df = pd.concat(result_list)
+
+    # print(f'PKL saving under {output_filename_pkl}')
+    # print(f'CSV saving under {output_filename_csv}')
+    #
+    # result_df.to_pickle(output_filename_pkl)
+    # result_df.to_csv(output_filename_csv)
+    return result_df
+
