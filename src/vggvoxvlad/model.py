@@ -3,8 +3,7 @@ from __future__ import absolute_import
 import keras
 import tensorflow as tf
 import keras.backend as K
-
-import src.vggvoxvlad.backbone as backbone
+from .backbone import resnet_2D_v2, resnet_2D_v1
 weight_decay = 1e-4
 
 
@@ -87,9 +86,9 @@ def vggvox_resnet2d_icassp(input_dim=(257, 250, 1), num_class=8631, mode='train'
     mgpu = len(keras.backend.tensorflow_backend._get_available_gpus())
 
     if net == 'resnet34s':
-        inputs, x = backbone.resnet_2D_v1(input_dim=input_dim, mode=mode)
+        inputs, x = resnet_2D_v1(input_dim=input_dim, mode=mode)
     else:
-        inputs, x = backbone.resnet_2D_v2(input_dim=input_dim, mode=mode)
+        inputs, x = resnet_2D_v2(input_dim=input_dim, mode=mode)
     # ===============================================
     #            Fully Connected Block 1
     # ===============================================

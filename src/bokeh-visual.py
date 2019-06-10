@@ -4,9 +4,8 @@ from bokeh.models import Div, ColumnDataSource, LinearColorMapper
 from bokeh.palettes import Spectral10, Category10
 from bokeh.plotting import figure, curdoc
 from vggvoxvlad.split import run_split
-sys.path.insert(0, 'D:\\Repos\\diurisation-pet-proj')
 from bokeh.models.widgets import Toggle
-from src.player import AudioPlayer
+from player import AudioPlayer
 from bokeh.layouts import column, row, grid
 import librosa
 from pathlib import Path
@@ -43,7 +42,7 @@ base_name = args.get('wavfile')[0].decode("utf-8")
 fname = f'{project_dir}/data/raw/{base_name}.wav'
 fname_rttm = f'{project_dir}/data/processed/{base_name}/{base_name}.rttm'
 fname_speaker_id = f'{project_dir}/data/processed/{base_name}/{base_name}.pkl'
-voxceleb_img_root = r'D:/VoxCeleb/images/'
+voxceleb_img_root = f'{project_dir}/data/images_small/'
 # Check if pickle exists - if it does not, then create one!
 if not(os.path.isfile(fname_speaker_id)):
     result_df = run_split(weight_path=f'{project_dir}/models/vggvox/weights-09-0.923.h5', fname=fname,
@@ -62,11 +61,11 @@ images_list = pd.read_csv(f'{project_dir}/data/raw/image_list.csv')
 images_list.set_index('Celeb Name', inplace=True)
 il_all = images_list.reset_index().groupby('Celeb Name').agg(pd.DataFrame.sample).loc[df_prob['Speaker']]
 img_dict = {}
-size = 128, 128
+#size = 128, 128
 for i, r in il_all.iterrows():
     fname_image = os.path.join(voxceleb_img_root, r['File Name'])
     im = Image.open(fname_image).convert('RGB')
-    im.thumbnail(size)
+    #im.thumbnail(size)
     img_dict[i] = np.flipud(np.asarray(im)[:, :, 0])
 # Fu
 img_dict['Empty'] = img_dict[list(img_dict.keys())[0]].copy()

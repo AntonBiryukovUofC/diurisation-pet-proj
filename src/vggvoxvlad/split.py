@@ -1,13 +1,14 @@
 import librosa
 import pandas as pd
-import src.vggvoxvlad.utils_dan as ut_d
+from .utils_dan import load_data
 import numpy as np
-import src.vggvoxvlad.model as model
+from .model import vggvox_resnet2d_icassp
 import matplotlib.pyplot as plt
+from tool.toolkits import initialize_GPU
 
 
 def make_network(weight_path, args, input_dim=(257, None, 1), num_class=1251):
-    network_eval = model.vggvox_resnet2d_icassp(input_dim=input_dim,
+    network_eval = vggvox_resnet2d_icassp(input_dim=input_dim,
                                                 num_class=num_class,
                                                 mode='eval', args=args)
     network_eval.load_weights(weight_path, by_name=True)
@@ -41,7 +42,7 @@ def voxceleb1_split(path, network, split_seconds=3,shift_seconds = 1.5, n_top_ca
 
         amp = np.array(df_tmp['Amplitude'])
 
-        specs = ut_d.load_data(amp, win_length=win_length, sr=sr,
+        specs = load_data(amp, win_length=win_length, sr=sr,
                                hop_length=hop_length, n_fft=n_fft,
                                spec_len=spec_len, mode='eval')
         specs = np.expand_dims(np.expand_dims(specs, 0), -1)
@@ -105,7 +106,6 @@ def run_split(weight_path = '../models/vggvox/weights-09-0.923.h5', fname = 'dat
     import argparse
     import pandas as pd
     # gpu configuration
-    import src.tool.toolkits as toolkits
 
 
     parser = argparse.ArgumentParser()
@@ -123,7 +123,7 @@ def run_split(weight_path = '../models/vggvox/weights-09-0.923.h5', fname = 'dat
     parser.add_argument('--test_type', default='normal', choices=['normal', 'hard', 'extend'], type=str)
 
     args = parser.parse_args(args=[])
-    toolkits.initialize_GPU(args)
+    initialize_GPU(args)
     net = make_network(weight_path, args)
     basename = os.path.splitext(os.path.basename(fname))[0]
     output_folder = f'data/processed/{basename}'

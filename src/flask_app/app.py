@@ -35,8 +35,10 @@ toolbar = DebugToolbarExtension(app)
 bootstrap = Bootstrap(app)
 socketio = SocketIO(app)
 
+path_to_bokeh_py = f'{project_dir}/src/bokeh-visual.py'
+
 bokeh_process = subprocess.Popen(
-    ['python', '-m', 'bokeh', 'serve', '--allow-websocket-origin=localhost:5000', r'D:\Repos\diurisation-pet-proj\src\bokeh-visual.py'], stdout=subprocess.PIPE)
+    ['python', '-m', 'bokeh', 'serve', '--allow-websocket-origin=localhost:5000', path_to_bokeh_py], stdout=subprocess.PIPE)
 
 @atexit.register
 def kill_server():
