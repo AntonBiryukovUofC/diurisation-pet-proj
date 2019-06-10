@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+{% extends "base.html" %}
+    {% block head %}
+        {{super()}}
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
+        <meta charset="UTF-8">
+    {% endblock %}
+
+
+    {% block body %}
+
+
+        {% block content %}
+
+
+        <div class="container-fluid align-items-stretch" >
+        <h1>Select one from the following options:</h1>
+        <div class="row align-content-stretch">
+
+        <div class="col-sm">
+          <div class="card">
+            <img class="img-thumbnail img-fluid" src="{{ url_for('static', filename='pics_examples/sc.jpg') }}" alt="sc">
+            <div class="card-body">
+            <h5 class="card-title">Steven Carell example</h5>
+            <p class="card-text">This short example is taken from Zach Galifianakis's show "Between Two Ferns"</p>
+            <a class="btn btn-primary" href="/bokeh-precalc/carell">Explore the example</a>
+            </div>
+          </div>
+        </div>
+
+         <div class="col-sm">
+          <div class="card">
+            <img class=" img-thumbnail img-fluid" src="{{ url_for('static', filename='pics_examples/zg.jpg') }}" alt="zg">
+            <div class="card-body">
+            <h5 class="card-title">Zach Galifianakis example</h5>
+            <p class="card-text">This short example is taken from Zach Galifianakis's show "Between Two Ferns"</p>
+            <a class="btn btn-primary" href="/bokeh-precalc/galifianakis">Explore the example</a>
+            </div>
+          </div>
+        </div>
+
+         <div class="col-sm">
+          <div class="card">
+            <img class="img-thumbnail img-fluid" src="{{ url_for('static', filename='pics_examples/rw.jpg') }}" alt="rw">
+            <div class="card-body">
+            <h5 class="card-title">Rainn Wilson example</h5>
+            <p class="card-text">An excerpt taken from the Office show, you can also hear Steve Carell yelling </p>
+            <a class="btn btn-primary" href="/bokeh-precalc/office">Explore the example</a>
+            </div>
+          </div>
+        </div>
+
+
+
+
+        <div class="col-sm">
+          <div class="well">
+            <h4>Some more examples to come..</h4>
+            <p>Later tomorrow..</p>
+          </div>
+        </div>
+      </div>
+
+
+
+        {% endblock %}
+    {% endblock %}

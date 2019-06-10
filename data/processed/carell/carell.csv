@@ -1,0 +1,25 @@
+,Time_s,Speaker,Probability,Country,Gender
+0,0,Steve Carell,0.60274565,USA,m
+1,0,Manish Dayal,0.14285831,USA,m
+2,0,Joseph Gordon-Levitt,0.036390137,USA,m
+0,1,Steve Carell,0.45407176,USA,m
+1,1,Jeremy Shada,0.18691178,USA,m
+2,1,Joseph Gordon-Levitt,0.036912374,USA,m
+0,2,Steve Carell,0.5602286,USA,m
+1,2,Brett Davern,0.18063706,USA,m
+2,2,Mandy Patinkin,0.01972391,USA,m
+0,3,Steve Carell,0.5386955,USA,m
+1,3,Brett Davern,0.10479414,USA,m
+2,3,Jeremy Shada,0.034016404,USA,m
+0,4,Steve Carell,0.89170295,USA,m
+1,4,Jack Lemmon,0.030079193,USA,m
+2,4,Sung Kang,0.009762602,USA,m
+0,5,Steve Carell,0.5432246,USA,m
+1,5,Sung Kang,0.11640551,USA,m
+2,5,Jack Lemmon,0.06861628,USA,m
+0,6,Steve Carell,0.7412168,USA,m
+1,6,Jack Lemmon,0.069797575,USA,m
+2,6,Peter Jackson,0.03933936,New Zealand,m
+0,7,Steve Carell,0.35948533,USA,m
+1,7,Steven Yeun,0.07824026,USA,m
+2,7,Jack Lemmon,0.07557398,USA,m

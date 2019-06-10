@@ -1,0 +1,61 @@
+,Time_s,Speaker,Probability,Country,Gender
+0,0,Mandy Patinkin,0.29639933,USA,m
+1,0,John Lloyd Young,0.16971248,USA,m
+2,0,Rob Corddry,0.075911656,USA,m
+0,1,James Woods,0.18249801,USA,m
+1,1,Rob Corddry,0.13613454,USA,m
+2,1,Brett Davern,0.09527872,USA,m
+0,2,Joseph Gordon-Levitt,0.30299354,USA,m
+1,2,Julie Chen,0.10644983,USA,f
+2,2,Mark Ruffalo,0.09675477,USA,m
+0,3,Joseph Gordon-Levitt,0.19977517,USA,m
+1,3,Julie Chen,0.1767727,USA,f
+2,3,Maria Menounos,0.10420921,USA,f
+0,4,Joseph Gordon-Levitt,0.48609126,USA,m
+1,4,Steven Yeun,0.07794274,USA,m
+2,4,John Lloyd Young,0.058960844,USA,m
+0,5,Steve Carell,0.804432,USA,m
+1,5,Chris Colfer,0.022355681,USA,m
+2,5,Steven Yeun,0.015469791,USA,m
+0,6,Steve Carell,0.6326207,USA,m
+1,6,Steven Yeun,0.103534356,USA,m
+2,6,Jeremy Shada,0.021834977,USA,m
+0,7,Steve Carell,0.6050156,USA,m
+1,7,Julie Chen,0.06237563,USA,f
+2,7,John Lloyd Young,0.04985579,USA,m
+0,8,Kate Walsh,0.4386141,USA,f
+1,8,Quentin Tarantino,0.26053852,USA,m
+2,8,Drake Bell,0.031963274,USA,m
+0,9,Kate Walsh,0.37643987,USA,f
+1,9,Quentin Tarantino,0.17688204,USA,m
+2,9,Tim Minchin,0.058115374,Australia,m
+0,10,Zach Galifianakis,0.3773809,USA,m
+1,10,Tom Kenny,0.11942351,USA,m
+2,10,Kate Walsh,0.11737781,USA,f
+0,11,Zach Galifianakis,0.6301402,USA,m
+1,11,Tom Kenny,0.14467399,USA,m
+2,11,Andrew Rannells,0.030257285,USA,m
+0,12,Zach Galifianakis,0.7852496,USA,m
+1,12,Tom Kenny,0.08233839,USA,m
+2,12,Andrew Rannells,0.04384054,USA,m
+0,13,Zach Galifianakis,0.8619814,USA,m
+1,13,Tom Kenny,0.03004811,USA,m
+2,13,Harry Connick Jr.,0.01623163,USA,m
+0,14,Zach Galifianakis,0.96075046,USA,m
+1,14,Quentin Tarantino,0.005245969,USA,m
+2,14,Harry Connick Jr.,0.0042348593,USA,m
+0,15,Zach Galifianakis,0.9677242,USA,m
+1,15,Harry Connick Jr.,0.006698708,USA,m
+2,15,Nikolaj Coster-Waldau,0.0034282224,Denmark,m
+0,16,Zach Galifianakis,0.9331431,USA,m
+1,16,Harry Connick Jr.,0.041155595,USA,m
+2,16,Kate Walsh,0.006557296,USA,f
+0,17,Zach Galifianakis,0.7222981,USA,m
+1,17,Harry Connick Jr.,0.2385289,USA,m
+2,17,John Hodgman,0.0037675072,USA,m
+0,18,Zach Galifianakis,0.23868223,USA,m
+1,18,Harry Connick Jr.,0.21653701,USA,m
+2,18,John Hodgman,0.08013203,USA,m
+0,19,Aaron Tveit,0.24542293,USA,m
+1,19,Tim Minchin,0.18988468,Australia,m
+2,19,Jennifer Saunders,0.06065798,UK,f
