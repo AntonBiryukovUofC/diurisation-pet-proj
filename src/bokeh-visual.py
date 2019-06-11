@@ -27,7 +27,7 @@ from PIL import Image
 #     speaker_track.drop(['skip1', 'skip2', 'skip3'], axis=1, inplace=True)
 #     return speaker_track
 #     #cat_type = CategoricalDtype(categories=speaker_track['speaker_id'].unique().tolist())
-
+print('Called bokeh visual')
 width = 1000
 height = 250
 # Retrieve the args
@@ -44,7 +44,9 @@ fname_rttm = f'{project_dir}/data/processed/{base_name}/{base_name}.rttm'
 fname_speaker_id = f'{project_dir}/data/processed/{base_name}/{base_name}.pkl'
 voxceleb_img_root = f'{project_dir}/data/images_small/'
 # Check if pickle exists - if it does not, then create one!
+
 if not(os.path.isfile(fname_speaker_id)):
+    print('Doing processing')
     result_df = run_split(weight_path=f'{project_dir}/models/vggvox/weights-09-0.923.h5', fname=fname,
               metafile_location=f'{project_dir}/data/raw/vox1_meta.txt', split_seconds=3, shift_seconds=1)
     output_folder = f'{project_dir}/data/processed/{base_name}'

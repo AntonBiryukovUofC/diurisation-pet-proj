@@ -1,7 +1,7 @@
 import uuid
 import wave
 import os
-
+import bokeh
 from bokeh.embed import server_document
 from flask import Flask,flash
 from flask import request,jsonify
@@ -22,7 +22,6 @@ print(project_dir)
 
 nav = Nav()
 
-
 app = Flask(__name__)
 app.config['FILEDIR'] = 'static/_files/'
 app.config['SECRET_KEY'] = 'hello'
@@ -38,7 +37,7 @@ socketio = SocketIO(app)
 path_to_bokeh_py = f'{project_dir}/src/bokeh-visual.py'
 
 bokeh_process = subprocess.Popen(
-    ['python', '-m', 'bokeh', 'serve', '--allow-websocket-origin=localhost:5000', path_to_bokeh_py], stdout=subprocess.PIPE)
+    ['python', '-m', 'bokeh', 'serve', '--allow-websocket-origin=localhost:5000','--allow-websocket-origin=127.0.0.1:5000', path_to_bokeh_py], stdout=subprocess.PIPE)
 
 @atexit.register
 def kill_server():
@@ -146,7 +145,7 @@ def end_recording():
 if __name__ == '__main__':
     #print(os.path.isfile('static/_files/tmp.wav'))
     nav.init_app(app)
-    socketio.run(app,debug=True)
-    app.run(debug=True)
+    socketio.run(app,debug=True,host = "0.0.0.0")
+    app.run(debug=True,host = "0.0.0.0")
 
 
