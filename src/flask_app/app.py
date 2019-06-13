@@ -145,7 +145,7 @@ def end_recording():
 if __name__ == '__main__':
     #print(os.path.isfile('static/_files/tmp.wav'))
     nav.init_app(app)
-    socketio.run(app,debug=True,host = "0.0.0.0")
-    app.run(debug=True,host = "0.0.0.0")
+    socketio.run(app,debug=True)
+    app.run(debug=True)
 
 
