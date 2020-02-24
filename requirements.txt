@@ -210,7 +210,7 @@ tornado==5.1
 TPOT==0.9.5
 tqdm==4.26.0
 traitlets==4.3.2
-Twisted==18.7.0
+Twisted==19.7.0
 unicodecsv==0.14.1
 update-checker==0.16
 urllib3==1.23
