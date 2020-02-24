@@ -8,31 +8,43 @@ class PlotDiar:
     """
     A viewer of segmentation
     """
-    def __init__(self, wav=None, title='', gui=False, pick=False, vgrid=False, size=(18, 9), maxx=0,df_tracks = None,df_speakers=None):
+
+    def __init__(
+        self,
+        wav=None,
+        title="",
+        gui=False,
+        pick=False,
+        vgrid=False,
+        size=(18, 9),
+        maxx=0,
+        df_tracks=None,
+        df_speakers=None,
+    ):
         self.rect_picked = None
         self.rect_color = (0.0, 0.6, 1.0, 1.0)  # '#0099FF'
         self.rect_selected_color = (0.75, 0.75, 0, 1.0)  # 'y'
         self.df_tracks = df_tracks
         self.df_speakers = df_speakers
-        plt.rcParams['keymap.fullscreen'] = 'ctrl+f'
-        plt.rcParams['keymap.home'] = ''
-        plt.rcParams['keymap.back'] = ''
-        plt.rcParams['keymap.forward'] = ''
-        plt.rcParams['keymap.pan'] = ''
-        plt.rcParams['keymap.zoom'] = 'ctrl+z'
-        plt.rcParams['keymap.quit'] = 'ctrl+q'
-        plt.rcParams['keymap.grid'] = ''
-        plt.rcParams['keymap.yscale'] = ''
-        plt.rcParams['keymap.xscale'] = ''
-        plt.rcParams['keymap.all_axes'] = ''
-        plt.rcParams['toolbar'] = 'None'
-        plt.rcParams['keymap.save'] = 'ctrl+s'
+        plt.rcParams["keymap.fullscreen"] = "ctrl+f"
+        plt.rcParams["keymap.home"] = ""
+        plt.rcParams["keymap.back"] = ""
+        plt.rcParams["keymap.forward"] = ""
+        plt.rcParams["keymap.pan"] = ""
+        plt.rcParams["keymap.zoom"] = "ctrl+z"
+        plt.rcParams["keymap.quit"] = "ctrl+q"
+        plt.rcParams["keymap.grid"] = ""
+        plt.rcParams["keymap.yscale"] = ""
+        plt.rcParams["keymap.xscale"] = ""
+        plt.rcParams["keymap.all_axes"] = ""
+        plt.rcParams["toolbar"] = "None"
+        plt.rcParams["keymap.save"] = "ctrl+s"
         # plt.rcParams.update({'font.family': 'courrier'})
 
         self.pick = pick
         self.gui = gui
         self.vgrid = vgrid
-        self.fig = plt.figure(figsize=size, facecolor='white', tight_layout=True)
+        self.fig = plt.figure(figsize=size, facecolor="white", tight_layout=True)
         self.plot = plt
         self.title = title
 
@@ -40,11 +52,13 @@ class PlotDiar:
         cids = list()
         if self.gui:
             cids.append(
-                self.fig.canvas.mpl_connect('key_press_event', self._on_keypress))
+                self.fig.canvas.mpl_connect("key_press_event", self._on_keypress)
+            )
             cids.append(
-                self.fig.canvas.mpl_connect('button_press_event', self._on_click))
+                self.fig.canvas.mpl_connect("button_press_event", self._on_click)
+            )
             if pick:
-                cids.append(self.fig.canvas.mpl_connect('pick_event', self._on_pick))
+                cids.append(self.fig.canvas.mpl_connect("pick_event", self._on_pick))
         self.height = 5
         self.maxx = maxx
         self.maxy = 0
@@ -57,8 +71,7 @@ class PlotDiar:
             self.timer.add_callback(self._update_timeline)
             self.timer.start()
 
-
-        self.timeline = self.ax.plot([0, 0], [0, 0], color='r')[-1]
+        self.timeline = self.ax.plot([0, 0], [0, 0], color="r")[-1]
         self.time_stamp = list()
         self.time_stamp_idx = 0
 
@@ -94,21 +107,23 @@ class PlotDiar:
         :param t: a float
         :return:
         """
-        ch = 'time:{:s} ({:.3f} sec {:d} frame)'.format(self._hms(t), t,
-                                                        int(t * 100))
-        ch2 = '\n\n\n'
+        ch = "time:{:s} ({:.3f} sec {:d} frame)".format(self._hms(t), t, int(t * 100))
+        ch2 = "\n\n\n"
         if self.rect_picked is not None:
             s = self.rect_picked.get_x()
             w = self.rect_picked.get_width()
             e = s + w
-            ch2 = 'segment  start: {:20s} ({:8.2f} sec {:8d} frame)\n'.format(
-                self._hms(s), s, int(s * 100))
-            ch2 += 'segment   stop: {:20s} ({:8.2f} sec {:8d} frame)\n'.format(
-                self._hms(e), e, int(e * 100))
-            ch2 += 'segment length: {:20s} ({:8.2f} sec {:8d} frame)\n'.format(
-                self._hms(w), w, int(w * 100))
+            ch2 = "segment  start: {:20s} ({:8.2f} sec {:8d} frame)\n".format(
+                self._hms(s), s, int(s * 100)
+            )
+            ch2 += "segment   stop: {:20s} ({:8.2f} sec {:8d} frame)\n".format(
+                self._hms(e), e, int(e * 100)
+            )
+            ch2 += "segment length: {:20s} ({:8.2f} sec {:8d} frame)\n".format(
+                self._hms(w), w, int(w * 100)
+            )
 
-        plt.xlabel(ch + '\n' + ch2)
+        plt.xlabel(ch + "\n" + ch2)
 
     def draw(self):
         """
@@ -117,10 +132,10 @@ class PlotDiar:
         y = 4
         labels_pos = []
         labels = []
-        #self.df_tracks['amplitude'].plot(ax=self.ax)
-        self.ax.plot(self.df_tracks['time'],self.df_tracks['amplitude'])
-        for i,row in self.df_speakers.iterrows():
-            self.ax.plot([row['start'],row['end']],[row['id'],row['id']],'-r' )
+        # self.df_tracks['amplitude'].plot(ax=self.ax)
+        self.ax.plot(self.df_tracks["time"], self.df_tracks["amplitude"])
+        for i, row in self.df_speakers.iterrows():
+            self.ax.plot([row["start"], row["end"]], [row["id"], row["id"]], "-r")
 
         if self.gui:
             plt.xlim([0, min(600, self.maxx)])
@@ -132,9 +147,7 @@ class PlotDiar:
         self.maxy = y
         self.end_play = self.maxx
 
-
-
-        plt.title(self.title + ' (last frame: ' + str(self.maxx) + ')')
+        plt.title(self.title + " (last frame: " + str(self.maxx) + ")")
         if self.gui:
             self._draw_info(0)
         plt.tight_layout()
@@ -142,10 +155,8 @@ class PlotDiar:
         self.time_stamp.sort()
 
         if self.vgrid:
-            for x in  self.time_stamp:
-                self.ax.plot([x, x], [0, self.maxy], linestyle=':',
-                             color='#AAAAAA')
-
+            for x in self.time_stamp:
+                self.ax.plot([x, x], [0, self.maxy], linestyle=":", color="#AAAAAA")
 
     def _dec_right(self, min, max):
         """
@@ -182,28 +193,28 @@ class PlotDiar:
         """
         hmin, hmax = self.ax.get_xlim()
         diff = hmax - hmin
-        if event.key == 'ctrl++' or event.key == 'ctrl+=':
+        if event.key == "ctrl++" or event.key == "ctrl+=":
             plt.xlim(hmin * 1.5, hmax * 1.5)
-        elif event.key == 'ctrl+-':
+        elif event.key == "ctrl+-":
             plt.xlim(hmin / 1.5, hmax / 1.5)
-        elif event.key == 'escape':
+        elif event.key == "escape":
             plt.xlim(0, self.maxx)
             plt.ylim(0, self.maxy)
-        elif event.key == 'right':
+        elif event.key == "right":
             self._dec_right(hmin, hmax)
-        elif event.key == 'left':
+        elif event.key == "left":
             self._dec_left(hmin, hmax)
-        elif event.key == 'ctrl+right':
+        elif event.key == "ctrl+right":
             plt.xlim(self.maxx - diff, self.maxx)
-        elif event.key == 'ctrl+left':
+        elif event.key == "ctrl+left":
             plt.xlim(0, diff)
-        elif event.key == 'alt+right':
-            self.time_stamp_idx = min(len(self.time_stamp)-1, self.time_stamp_idx + 1)
+        elif event.key == "alt+right":
+            self.time_stamp_idx = min(len(self.time_stamp) - 1, self.time_stamp_idx + 1)
             if self.audio is not None:
                 self.audio.pause()
                 self.audio.seek(self.time_stamp[self.time_stamp_idx])
             self._draw_timeline(self.time_stamp[self.time_stamp_idx])
-        elif event.key == 'alt+left':
+        elif event.key == "alt+left":
             self.time_stamp_idx = max(0, self.time_stamp_idx - 1)
             if self.audio is not None:
                 self.audio.pause()
@@ -211,8 +222,8 @@ class PlotDiar:
             self._draw_timeline(self.time_stamp[self.time_stamp_idx])
         elif event.key is None and self.audio is not None:
             self.audio.play()
-        elif event.key == ' ' and self.audio is not None:
-            if(self.audio.playing()):
+        elif event.key == " " and self.audio is not None:
+            if self.audio.playing():
                 self.audio.pause()
             else:
                 self.audio.play()
@@ -237,7 +248,7 @@ class PlotDiar:
         :param event: a picked event
         """
         if isinstance(event.artist, Rectangle) and event.mouseevent.dblclick:
-            print('on pick dbclick')
+            print("on pick dbclick")
             rect = event.artist
             x, y = rect.get_xy()
             w = rect.get_width()
@@ -291,4 +302,4 @@ class PlotDiar:
         s %= 3600
         m = int(s) // 60
         s %= 60
-        return '{:d}:{:d}:{:.2f}'.format(h, m, s)
+        return "{:d}:{:d}:{:.2f}".format(h, m, s)

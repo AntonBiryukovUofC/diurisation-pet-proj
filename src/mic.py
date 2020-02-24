@@ -7,14 +7,16 @@ FORMAT = pyaudio.paInt16
 CHANNELS = 1
 RATE = int(16e3)
 
-'''
+"""
 function records audio from the default microphone for length 't' seconds and sample rate 'sr', and deposits a .wav file
 named 'file_name' in the directory specified by 'path'
-'''
+"""
 
 
 class VoiceRecorder:
-    def __init__(self, file_name='test_record.wav', path='../data/raw', max_time_sec=20):
+    def __init__(
+        self, file_name="test_record.wav", path="../data/raw", max_time_sec=20
+    ):
         self.frames = []
         self.max_time = max_time_sec
         self.output_name = os.path.join(path, file_name)
@@ -25,12 +27,13 @@ class VoiceRecorder:
         self.open()
 
     def open(self):
-        self.stream = self.p.open(format=FORMAT,
-                                  channels=CHANNELS,
-                                  rate=RATE,
-                                  input=True,
-                                  frames_per_buffer=CHUNK)
-
+        self.stream = self.p.open(
+            format=FORMAT,
+            channels=CHANNELS,
+            rate=RATE,
+            input=True,
+            frames_per_buffer=CHUNK,
+        )
 
     def start_record(self):
         for i in range(0, int(RATE / CHUNK) * self.max_time):
@@ -50,11 +53,11 @@ class VoiceRecorder:
         return self.stream.is_active()
 
     def save_wave(self):
-        self.wf = wave.open(self.output_name, 'wb')
+        self.wf = wave.open(self.output_name, "wb")
         self.wf.setnchannels(CHANNELS)
         self.wf.setframerate(RATE)
         self.wf.setsampwidth(self.p.get_sample_size(FORMAT))
-        self.wf.writeframes(b''.join(self.frames))
+        self.wf.writeframes(b"".join(self.frames))
         self.wf.close()
 
 
@@ -69,29 +72,36 @@ def bokeh_test_record():
     import numpy as np
     import pandas as pd
     from PIL import Image
+
     width = 800
     height = 200
     vr = VoiceRecorder()
-    src = ColumnDataSource({'time':np.arange(0,100,1),'amplitude':np.random.randn(1,100)})
-    p = figure(plot_width=width, plot_height=height, title="Audio Waveform",
-               toolbar_location='above', tools=[], output_backend="webgl")
-    p.line('time','amplitude',source = src)
-    toggle_record = Toggle(label='Record', active=False)
+    src = ColumnDataSource(
+        {"time": np.arange(0, 100, 1), "amplitude": np.random.randn(1, 100)}
+    )
+    p = figure(
+        plot_width=width,
+        plot_height=height,
+        title="Audio Waveform",
+        toolbar_location="above",
+        tools=[],
+        output_backend="webgl",
+    )
+    p.line("time", "amplitude", source=src)
+    toggle_record = Toggle(label="Record", active=False)
 
     def callback_record(arg):
-        p.title.text = f'{toggle.active}'
+        p.title.text = f"{toggle.active}"
         if toggle_record.active:
-            toggle_record.label = 'Recording..'
-            toggle_record.button_type = 'warning'
+            toggle_record.label = "Recording.."
+            toggle_record.button_type = "warning"
             vr.start_record()
         else:
-            toggle_record.label = 'Record via mic'
-            toggle_record.button_type = 'default'
+            toggle_record.label = "Record via mic"
+            toggle_record.button_type = "default"
             if vr.recording():
                 vr.stop_record()
-                toggle_record.label = 'Done recording'
-
-
+                toggle_record.label = "Done recording"
 
     toggle_record.on_click(callback_record)
     curdoc().add_root(grid(column(toggle_record, p)))

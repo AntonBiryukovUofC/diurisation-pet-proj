@@ -18,12 +18,13 @@ import webrtcvad
 
 from hparam import hparam as hp
 
+
 def read_wave(path, sr):
     """Reads a .wav file.
     Takes the path, and returns (PCM audio data, sample rate).
     Assumes sample width == 2
     """
-    with contextlib.closing(wave.open(path, 'rb')) as wf:
+    with contextlib.closing(wave.open(path, "rb")) as wf:
         num_channels = wf.getnchannels()
         assert num_channels == 1
         sample_width = wf.getsampwidth()
@@ -35,9 +36,11 @@ def read_wave(path, sr):
     assert len(data.shape) == 1
     assert sr in (8000, 16000, 32000, 48000)
     return data, pcm_data
-    
+
+
 class Frame(object):
     """Represents a "frame" of audio data."""
+
     def __init__(self, bytes, timestamp, duration):
         self.bytes = bytes
         self.timestamp = timestamp
@@ -55,13 +58,12 @@ def frame_generator(frame_duration_ms, audio, sample_rate):
     timestamp = 0.0
     duration = (float(n) / sample_rate) / 2.0
     while offset + n < len(audio):
-        yield Frame(audio[offset:offset + n], timestamp, duration)
+        yield Frame(audio[offset : offset + n], timestamp, duration)
         timestamp += duration
         offset += n
 
 
-def vad_collector(sample_rate, frame_duration_ms,
-                  padding_duration_ms, vad, frames):
+def vad_collector(sample_rate, frame_duration_ms, padding_duration_ms, vad, frames):
     """Filters out non-voiced audio frames.
     Given a webrtcvad.Vad and a source of audio frames, yields only
     the voiced audio.
@@ -136,18 +138,19 @@ def VAD_chunk(aggressiveness, path):
     speech_times = []
     speech_segs = []
     for i, time in enumerate(times):
-        start = np.round(time[0],decimals=2)
-        end = np.round(time[1],decimals=2)
+        start = np.round(time[0], decimals=2)
+        end = np.round(time[1], decimals=2)
         j = start
-        while j + .4 < end:
-            end_j = np.round(j+.4,decimals=2)
+        while j + 0.4 < end:
+            end_j = np.round(j + 0.4, decimals=2)
             speech_times.append((j, end_j))
-            speech_segs.append(audio[int(j*hp.data.sr):int(end_j*hp.data.sr)])
+            speech_segs.append(audio[int(j * hp.data.sr) : int(end_j * hp.data.sr)])
             j = end_j
         else:
             speech_times.append((j, end))
-            speech_segs.append(audio[int(j*hp.data.sr):int(end*hp.data.sr)])
+            speech_segs.append(audio[int(j * hp.data.sr) : int(end * hp.data.sr)])
     return speech_times, speech_segs
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     speech_times, speech_segs = VAD_chunk(sys.argv[1], sys.argv[2])
