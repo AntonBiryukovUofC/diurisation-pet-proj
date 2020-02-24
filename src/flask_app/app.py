@@ -1,10 +1,10 @@
-from pathlib import Path
-import os
 import atexit
+import os
 import subprocess
 import uuid
 import wave
 from pathlib import Path
+
 from bokeh.embed import server_document
 from flask import Flask, flash
 from flask import current_app, session, url_for, render_template, redirect
@@ -43,7 +43,6 @@ bokeh_process = subprocess.Popen(
     ],
     stdout=subprocess.PIPE,
 )
-
 
 @atexit.register
 def kill_server():

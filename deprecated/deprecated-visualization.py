@@ -11,26 +11,56 @@ from src.viewer import PlotDiar
 import seaborn as sns
 from tqdm import trange
 
-fname = 'data/raw/z-c-feisty.wav'
+fname = "data/raw/z-c-feisty.wav"
 filename_base = os.path.splitext(os.path.basename(fname))[0]
 x, sr = librosa.load(fname)
 print(filename_base)
 
-fname_rttm = 'data/processed/test.rttm'
-speaker_track = pd.read_csv(fname_rttm, header=None, delim_whitespace=True,
-                            names=['x1', 'filename', 'fileid', 'start', 'duration', 'skip1', 'skip2', 'speaker_id',
-                                   'skip3'])
-speaker_track['end'] = speaker_track['start'] + speaker_track['duration']
-speaker_track['id'] = speaker_track['speaker_id'].apply(lambda x: int(x.split('speaker')[1]))
+fname_rttm = "data/processed/test.rttm"
+speaker_track = pd.read_csv(
+    fname_rttm,
+    header=None,
+    delim_whitespace=True,
+    names=[
+        "x1",
+        "filename",
+        "fileid",
+        "start",
+        "duration",
+        "skip1",
+        "skip2",
+        "speaker_id",
+        "skip3",
+    ],
+)
+speaker_track["end"] = speaker_track["start"] + speaker_track["duration"]
+speaker_track["id"] = speaker_track["speaker_id"].apply(
+    lambda x: int(x.split("speaker")[1])
+)
 
-bins_speaker = pd.DataFrame({'name': speaker_track['speaker_id'].values},
-                            index=pd.IntervalIndex.from_arrays(left=speaker_track['start'], right=speaker_track['end']))
-speaker_track.drop(['skip1', 'skip2', 'skip3'], axis=1, inplace=True)
-cat_type = CategoricalDtype(categories=speaker_track['speaker_id'].unique().tolist())
+bins_speaker = pd.DataFrame(
+    {"name": speaker_track["speaker_id"].values},
+    index=pd.IntervalIndex.from_arrays(
+        left=speaker_track["start"], right=speaker_track["end"]
+    ),
+)
+speaker_track.drop(["skip1", "skip2", "skip3"], axis=1, inplace=True)
+cat_type = CategoricalDtype(categories=speaker_track["speaker_id"].unique().tolist())
 
-df = pd.DataFrame({"time":np.arange(x.shape[0])/sr,"amplitude":x}).sample(frac=0.001).sort_values('time')
+df = (
+    pd.DataFrame({"time": np.arange(x.shape[0]) / sr, "amplitude": x})
+    .sample(frac=0.001)
+    .sort_values("time")
+)
 
-p = PlotDiar(wav=fname, gui=True, size=(15, 6), maxx = df['time'].max(),df_tracks = df,df_speakers = speaker_track)
+p = PlotDiar(
+    wav=fname,
+    gui=True,
+    size=(15, 6),
+    maxx=df["time"].max(),
+    df_tracks=df,
+    df_speakers=speaker_track,
+)
 p.draw()
 p.plot.show()
 

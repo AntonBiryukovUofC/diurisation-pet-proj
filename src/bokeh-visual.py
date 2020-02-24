@@ -27,7 +27,7 @@ from PIL import Image
 #     speaker_track.drop(['skip1', 'skip2', 'skip3'], axis=1, inplace=True)
 #     return speaker_track
 #     #cat_type = CategoricalDtype(categories=speaker_track['speaker_id'].unique().tolist())
-
+print('Called bokeh visual')
 width = 1000
 height = 250
 # Retrieve the args
