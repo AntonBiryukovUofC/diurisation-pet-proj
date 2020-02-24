@@ -1,5 +1,12 @@
 import os
+
+import librosa
 import numpy as np
+import pandas as pd
+from PIL import Image
+
+from player import AudioPlayer
+from vggvoxvlad.split import run_split
 
 
 def initialize_GPU(args):
@@ -146,3 +153,57 @@ def sync_model(src_model, tgt_model):
         if len(l.get_weights()) > 0:
             l.set_weights(params["{}".format(l.name)])
     return tgt_model
+
+
+def pull_image_list(project_dir):
+    # Preload images from VoxCeleb:
+    images_list = pd.read_csv(f"{project_dir}/data/raw/image_list.csv")
+    images_list.set_index("Celeb Name", inplace=True)
+    il_all = (
+        images_list.reset_index()
+        .groupby("Celeb Name")
+        .agg(pd.DataFrame.sample)
+        .loc[df_prob["Speaker"]]
+    )
+    img_dict = {}
+    # size = 128, 128
+    for i, r in il_all.iterrows():
+        fname_image = os.path.join(voxceleb_img_root, r["File Name"])
+        im = Image.open(fname_image).convert("RGB")
+        img_dict[i] = np.flipud(np.asarray(im)[:, :, 0])
+    img_dict["Empty"] = img_dict[list(img_dict.keys())[0]].copy()
+    np.random.shuffle(img_dict["Empty"])
+    return img_dict
+
+
+def pull_speaker_id_time_df(project_dir, fname_speaker_id):
+    # Check if pickle exists - if it does not, then create one!
+    if not (os.path.isfile(fname_speaker_id)):
+        result_df = run_split(
+            weight_path=f"{project_dir}/models/vggvox/weights-09-0.923.h5",
+            fname=fname,
+            metafile_location=f"{project_dir}/data/raw/vox1_meta.txt",
+            split_seconds=3,
+            shift_seconds=1,
+        )
+        output_folder = f"{project_dir}/data/processed/{base_name}"
+        os.makedirs(output_folder, exist_ok=True)
+        result_df.to_pickle(fname_speaker_id).set_index("Time_s")
+        df_prob = pd.read_pickle(fname_speaker_id).set_index("Time_s")
+    else:
+        # Preload speaker ID vs time dataframes
+        df_prob = pd.read_pickle(fname_speaker_id).set_index("Time_s")
+    return df_prob
+
+
+def generate_waveform_df(fname):
+    x, sr = librosa.load(fname)
+    ap = AudioPlayer(fname)
+    fr = ap.wf.getframerate()
+    df = pd.DataFrame({"time": np.arange(x.shape[0]) / (sr), "amplitude": x})
+    max_time = df["time"].max()
+    df_small = df.sample(frac=0.001).sort_values("time")
+    df_small["amplitude"] = (df_small["amplitude"] - df_small["amplitude"].min()) / (
+        df_small["amplitude"].max() - df_small["amplitude"].min()
+    ) - 0.5
+    return ap, df, max_time, df_small

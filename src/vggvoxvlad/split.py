@@ -4,7 +4,7 @@ from .utils_dan import load_data
 import numpy as np
 from .model import vggvox_resnet2d_icassp
 import matplotlib.pyplot as plt
-from tool.toolkits import initialize_GPU
+from utils.utils import initialize_GPU
 
 
 def make_network(weight_path, args, input_dim=(257, None, 1), num_class=1251):

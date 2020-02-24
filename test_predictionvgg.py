@@ -6,7 +6,7 @@ sys.path.insert(0, ".")
 # gpu configuration
 import matplotlib.pyplot as plt
 import src.vggvoxvlad.model as model
-import src.tool.toolkits as toolkits
+import src.utils.utils as toolkits
 import src.vggvoxvlad.utils as ut
 
 params = {

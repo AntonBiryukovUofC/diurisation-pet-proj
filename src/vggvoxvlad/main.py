@@ -7,7 +7,7 @@ import numpy as np
 
 sys.path.insert(0, r"D:\Repos\VGG-Speaker-Recognition")
 
-import tool.toolkits as toolkits
+import utils.utils as toolkits
 
 
 # ===========================================

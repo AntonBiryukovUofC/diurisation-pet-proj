@@ -4,7 +4,7 @@ import os
 import sys
 import numpy as np
 
-sys.path.append("../tool")
+sys.path.append("../utils")
 import toolkits
 import utils as ut
 

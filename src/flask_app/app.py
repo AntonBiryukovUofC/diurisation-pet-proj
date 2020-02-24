@@ -44,6 +44,7 @@ bokeh_process = subprocess.Popen(
     stdout=subprocess.PIPE,
 )
 
+
 @atexit.register
 def kill_server():
     bokeh_process.kill()
@@ -122,8 +123,9 @@ def index_audio():
 
 @socketio.on("start-recording", namespace="/audio")
 def start_recording(options):
-    flash("Started recording...", "primary")
     """Start recording audio from the client."""
+
+    flash("Started recording...", "primary")
     wf = wave.open(current_app.config["FILEDIR"] + session["wavename"], "wb")
     wf.setnchannels(options.get("numChannels", 1))
     wf.setsampwidth(options.get("bps", 16) // 8)
@@ -148,7 +150,6 @@ def end_recording():
 
 
 if __name__ == "__main__":
-    # print(os.path.isfile('static/_files/tmp.wav'))
     nav.init_app(app)
     socketio.run(app, debug=True)
     app.run(debug=True)

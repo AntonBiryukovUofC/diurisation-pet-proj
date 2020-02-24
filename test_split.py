@@ -9,7 +9,7 @@ sys.path.insert(0, "/Users/danielsola/Downloads/diurisation-pet-proj-master_3/")
 import src.vggvoxvlad.split as splt
 import matplotlib.pyplot as plt
 import src.vggvoxvlad.model as model
-import src.tool.toolkits as toolkits
+import src.utils.utils as toolkits
 import src.vggvoxvlad.utils_dan as ut_d
 import src.vggvoxvlad.utils as ut
 import numpy as np
