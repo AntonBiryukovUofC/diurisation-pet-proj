@@ -7,6 +7,7 @@ from PIL import Image
 
 from player import AudioPlayer
 from vggvoxvlad.split import run_split
+import pathos.multiprocessing as mp
 
 
 def initialize_GPU(args):
@@ -27,21 +28,9 @@ def get_chunks(l, n):
         yield l[i : i + n]
 
 
-def debug_generator(generator):
-    import cv2
-    import pdb
-
-    G = generator.next()
-    for i, img in enumerate(G[0]):
-        path = "../sample/{}.jpg".format(i)
-        img = np.asarray(img[:, :, ::-1] + 128.0, dtype="uint8")
-        cv2.imwrite(path, img)
-
-
 # set up multiprocessing
 def set_mp(processes=8):
     # import multiprocessing as mp
-    import pathos.multiprocessing as mp
 
     def init_worker():
         import signal
@@ -155,7 +144,7 @@ def sync_model(src_model, tgt_model):
     return tgt_model
 
 
-def pull_image_list(project_dir):
+def pull_image_list(project_dir,voxceleb_img_root,df_prob):
     # Preload images from VoxCeleb:
     images_list = pd.read_csv(f"{project_dir}/data/raw/image_list.csv")
     images_list.set_index("Celeb Name", inplace=True)
@@ -176,7 +165,7 @@ def pull_image_list(project_dir):
     return img_dict
 
 
-def pull_speaker_id_time_df(project_dir, fname_speaker_id):
+def pull_speaker_id_time_df(project_dir, fname_speaker_id,fname,base_name):
     # Check if pickle exists - if it does not, then create one!
     if not (os.path.isfile(fname_speaker_id)):
         result_df = run_split(
@@ -188,7 +177,7 @@ def pull_speaker_id_time_df(project_dir, fname_speaker_id):
         )
         output_folder = f"{project_dir}/data/processed/{base_name}"
         os.makedirs(output_folder, exist_ok=True)
-        result_df.to_pickle(fname_speaker_id).set_index("Time_s")
+        result_df.to_pickle(fname_speaker_id)
         df_prob = pd.read_pickle(fname_speaker_id).set_index("Time_s")
     else:
         # Preload speaker ID vs time dataframes
@@ -199,10 +188,9 @@ def pull_speaker_id_time_df(project_dir, fname_speaker_id):
 def generate_waveform_df(fname):
     x, sr = librosa.load(fname)
     ap = AudioPlayer(fname)
-    fr = ap.wf.getframerate()
     df = pd.DataFrame({"time": np.arange(x.shape[0]) / (sr), "amplitude": x})
     max_time = df["time"].max()
-    df_small = df.sample(frac=0.001).sort_values("time")
+    df_small = df.sample(frac=0.01).sort_values("time")
     df_small["amplitude"] = (df_small["amplitude"] - df_small["amplitude"].min()) / (
         df_small["amplitude"].max() - df_small["amplitude"].min()
     ) - 0.5

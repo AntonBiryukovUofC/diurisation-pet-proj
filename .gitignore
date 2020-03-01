@@ -99,6 +99,10 @@ venv.bak/
 
 # mkdocs documentation
 /site
-
+# produced data
+.idea
+src/flask_app/static/_files/*.wav
+data/raw/*.wav
+data/processed/
 # mypy
 .mypy_cache/

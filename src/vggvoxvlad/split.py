@@ -1,10 +1,20 @@
 import librosa
-import pandas as pd
-from .utils_dan import load_data
 import numpy as np
+import pandas as pd
+
 from .model import vggvox_resnet2d_icassp
-import matplotlib.pyplot as plt
-from utils.utils import initialize_GPU
+from .utils_dan import load_data
+
+
+def initialize_GPU(args):
+    # Initialize GPUs
+    import tensorflow as tf
+
+    # os.environ["CUDA_VISIBLE_DEVICES"] = args.gpu
+    config = tf.ConfigProto()
+    config.gpu_options.allow_growth = True
+    session = tf.Session(config=config)
+    return session
 
 
 def make_network(weight_path, args, input_dim=(257, None, 1), num_class=1251):
@@ -96,41 +106,6 @@ def voxceleb1_split(
     return result_list
 
 
-def plot_split(result_list, num_speakers=2):
-    t = []
-    prob = []
-    name = []
-
-    for df in result_list:
-        if df["Probability"][0] >= 0.5:
-            t.append(df["Time (s)"][0])
-            prob.append(df["Probability"][0])
-            name.append(df["Speaker"][0])
-    t = np.array(t)
-    prob = np.array(prob)
-
-    from collections import Counter
-
-    speaker_dict = Counter(name)
-    sorted_speaker = sorted(speaker_dict.items(), key=lambda kv: kv[1])
-    sorted_speaker = sorted_speaker[-num_speakers:]
-    names = [i[0] for i in sorted_speaker]
-
-    for i in range(len(name)):
-        if name[i] not in names:
-            name[i] = "Other"
-
-    import seaborn as sns
-
-    plt.figure(figsize=(16, 2))
-    by_school = sns.barplot(x=t, y=prob, hue=name)
-    plt.xlabel("Time (s)")
-    plt.ylabel("Probability")
-
-    for item in by_school.get_xticklabels():
-        item.set_rotation(90)
-
-
 def run_split(
     weight_path="../models/vggvox/weights-09-0.923.h5",
     fname="data/raw/atkinson-clarkson.wav",
@@ -176,8 +151,6 @@ def run_split(
     output_folder = f"data/processed/{basename}"
 
     os.makedirs(output_folder, exist_ok=True)
-    output_filename_pkl = os.path.join(output_folder, f"{basename}.pkl")
-    output_filename_csv = os.path.join(output_folder, f"{basename}.csv")
 
     result_list = voxceleb1_split(
         path=fname,
@@ -188,9 +161,4 @@ def run_split(
     )
     result_df = pd.concat(result_list)
 
-    # print(f'PKL saving under {output_filename_pkl}')
-    # print(f'CSV saving under {output_filename_csv}')
-    #
-    # result_df.to_pickle(output_filename_pkl)
-    # result_df.to_csv(output_filename_csv)
     return result_df

@@ -25,9 +25,9 @@ voxceleb_img_root = f"{project_dir}/data/images_small/"
 filename_base = os.path.splitext(os.path.basename(fname))[0]
 
 # Get ID vs time:
-df_prob = pull_speaker_id_time_df(project_dir, fname_speaker_id)
+df_prob = pull_speaker_id_time_df(project_dir, fname_speaker_id,fname,base_name)
 # Get an image dictionary with celebrities
-img_dict = pull_image_list(project_dir)
+img_dict = pull_image_list(project_dir, voxceleb_img_root, df_prob)
 
 # Generate a dataframe with audiowaveform:
 audio_player, df_waveform_full, max_time, df_waveform_small = generate_waveform_df(
@@ -152,11 +152,11 @@ df_prob_instant = {}
 for t in times_speakers:
     tmp = (
         df_prob[df_prob.index <= t]
-        .groupby("Speaker")
-        .last()
-        .sort_values("cumsum_prob")
-        .reset_index()
-        .tail(10)
+            .groupby("Speaker")
+            .last()
+            .sort_values("cumsum_prob")
+            .reset_index()
+            .tail(10)
     )
     tmp["cumsum_prob"] = tmp["cumsum_prob"] / tmp["cumsum_prob"].sum()
     df_prob_per_time[t] = tmp
@@ -166,10 +166,10 @@ mapper = LinearColorMapper(palette=Spectral10, low=0, high=df_prob.index.nunique
 
 df_subset = (
     df_prob[df_prob.index < 0]
-    .groupby("Speaker")
-    .last()
-    .sort_values("cumsum_prob")
-    .reset_index()
+        .groupby("Speaker")
+        .last()
+        .sort_values("cumsum_prob")
+        .reset_index()
 )
 cur_index = 1
 

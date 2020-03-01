@@ -31,10 +31,19 @@ var socketio = io.connect(location.origin + '/audio', {transports: ['websocket']
 
 socketio.on('add-wavefile', function(url) {
     // add new recording to page
+    if (document.getElementById('audio') !=null){
+    document.getElementById('audio').parentNode.removeChild(document.getElementById('audio'));
+    }
+
     audio = document.createElement('p');
     audio.innerHTML = '<audio src="' + url + '" controls id = "audio">';
+
+    if (document.getElementById('remove') !=null){
     document.getElementById('remove').parentNode.removeChild(document.getElementById('remove'));
+    }
+
     document.getElementById('wavefiles').replaceChild(audio,document.getElementById('wavefiles').firstChild);
+    document.querySelector('audio').load();
 });
 
 function toggleRecording( e ) {

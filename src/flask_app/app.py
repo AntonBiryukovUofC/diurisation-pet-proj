@@ -1,16 +1,17 @@
 import atexit
+import logging
 import os
 import subprocess
 import uuid
 import wave
 from pathlib import Path
 
+import numpy
 from bokeh.embed import server_document
 from flask import Flask, flash
 from flask import current_app, session, url_for, render_template, redirect
 from flask import request, jsonify
 from flask_bootstrap import Bootstrap
-from flask_debugtoolbar import DebugToolbarExtension
 from flask_nav import Nav
 from flask_socketio import SocketIO
 from flask_socketio import emit
@@ -18,36 +19,38 @@ from flask_socketio import emit
 project_dir = Path(__file__).resolve().parents[2]
 print(project_dir)
 
+log = logging.getLogger(__name__)
+log.setLevel(logging.DEBUG)
 nav = Nav()
 
 app = Flask(__name__)
 app.config["FILEDIR"] = "static/_files/"
-app.config["SECRET_KEY"] = "hello"
-app.config["DEBUG_TB_INTERCEPT_REDIRECTS"] = False
-app.debug = True
-
-toolbar = DebugToolbarExtension(app)
+app.config["SECRET_KEY"] = "hello_diurisation"
+#app.config["DEBUG_TB_INTERCEPT_REDIRECTS"] = False
+nav.init_app(app)
 bootstrap = Bootstrap(app)
 socketio = SocketIO(app)
-
+#
 path_to_bokeh_py = f"{project_dir}/src/bokeh-visual.py"
-
-bokeh_process = subprocess.Popen(
-    [
-        "python",
-        "-m",
-        "bokeh",
-        "serve",
-        "--allow-websocket-origin=localhost:5000",
-        path_to_bokeh_py,
-    ],
-    stdout=subprocess.PIPE,
-)
+if os.getenv('bokeh_runs','no') == 'no':
+    bokeh_process = subprocess.Popen(
+        [
+            "python",
+            "-m",
+            "bokeh",
+            "serve",
+            "--allow-websocket-origin=localhost:5000",
+            path_to_bokeh_py,
+        ],
+        stdout=subprocess.PIPE,
+    )
+    os.environ['bokeh_runs'] = 'yes'
 
 
 @atexit.register
 def kill_server():
     bokeh_process.kill()
+    os.environ['bokeh_runs'] = 'no'
 
 
 @app.route("/")
@@ -83,6 +86,7 @@ def bokeh_precalc(wavfile):
 def bokeh_user():
 
     sname = session.get("wavename", "empty")
+    print(sname)
     pth_str = url_for("static", filename="_files/" + sname)[1:]
     pth = Path(pth_str)
     print(type(pth_str))
@@ -101,10 +105,10 @@ def bokeh_user():
     else:
         print(f"The path does not exist {pth_str}")
         flash(
-            "No user file exists..Did you forget to press the record button (mic) first ?",
+            f"No user file exists {pth_str}..Did you forget to press the record button (mic) first ?",
             "danger",
         )
-        return redirect(url_for("index_audio"))
+        #return redirect(url_for("index_audio"))
 
 
 @app.route("/get_my_ip", methods=["GET"])
@@ -124,8 +128,13 @@ def index_audio():
 @socketio.on("start-recording", namespace="/audio")
 def start_recording(options):
     """Start recording audio from the client."""
+    session["wavefile"] = None
 
+    #session["wavename"] = str(numpy.random.randint(0,10,1)[0])+session["wavename"]
+
+    log.warning('Started recording')
     flash("Started recording...", "primary")
+    print('Started recording!!!!')
     wf = wave.open(current_app.config["FILEDIR"] + session["wavename"], "wb")
     wf.setnchannels(options.get("numChannels", 1))
     wf.setsampwidth(options.get("bps", 16) // 8)
@@ -136,7 +145,11 @@ def start_recording(options):
 @socketio.on("write-audio", namespace="/audio")
 def write_audio(data):
     """Write a chunk of audio from the client."""
-    session["wavefile"].writeframes(data)
+    if 'wavefile' in session.keys():
+        session["wavefile"].writeframes(data)
+    else:
+        print('No wavefile in session!')
+
 
 
 @socketio.on("end-recording", namespace="/audio")
@@ -144,12 +157,13 @@ def end_recording():
     """Stop recording audio from the client."""
     emit("add-wavefile", url_for("static", filename="_files/" + session["wavename"]))
     print(session["wavename"])
+    log.warning('Ended recording!')
     session["wavefile"].close()
     flash("Finished recording...", "success")
-    del session["wavefile"]
+    #del session["wavefile"]
 
 
 if __name__ == "__main__":
-    nav.init_app(app)
-    socketio.run(app, debug=True)
-    app.run(debug=True)
+    #app.run(debug=True)
+    socketio.run(app, debug=False)
+

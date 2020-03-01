@@ -13,29 +13,6 @@ For Flask-app to use Bootstrap 4, install `bootstrap-flask`, not `flask-bootstra
 - `bokeh` for interactive visualization 
 - `flask`,`bootstrap-flask`, `flask-nav` in case you'd like to run the demo in your browser
 
-## TODOs for Anton:
-
-- Tie a microphone recording module to the visualization via Bokeh server app
-- Start working on a Flask application and think about how to deploy it 
- 
-
-## TODOs for Dan:
-
-- Create a CLI wrapper for the set of scripts, that takes a path to an audiofile as an input argument, or a name of a preset `.wav` file, and launches a `bokeh` application locally on the user's machine. Rely on `click` package for settting up arguments
-
-- Create a quick `gif` animation of running the sript in the terminal - use https://github.com/faressoft/terminalizer to help you create a `gif`. Gif would show the following:
-    - Clone repo,
-    - Run CLI wrapper with a `--help` parameter, that would show some info about the script usage, as well as possible values for preset examples
-    - `ls` in the terminal for a custom `wav`
-    - Run CLI on some custom `wav` file
-
-- Clean this README, provide a nice overview of what the project does and how it achieves the goal - mention steps like:
-    - VAD for voice activation detection
-    - Speech Activity
-    - Diarization clustering
-    - VoxCeleb v1 dataset, metadata example, how the validation data was prepared (point to the right folder in the repo that has the codes, and the weights) -- this step is quite important actually, as people might be interested in downloading our weights
-    - How the embeddings and the final layer were trained
-
 
 ## What did not work
 - Figuring out if we can avoid downloading data and just use a pre-trained model from somewhere that produces 
@@ -98,6 +75,34 @@ Project Organization
 
 
 --------
+
+
+# Appendix
+
+
+## TODOs for Anton:
+
+- Tie a microphone recording module to the visualization via Bokeh server app
+- Start working on a Flask application and think about how to deploy it 
+ 
+
+## TODOs for Dan:
+
+- Create a CLI wrapper for the set of scripts, that takes a path to an audiofile as an input argument, or a name of a preset `.wav` file, and launches a `bokeh` application locally on the user's machine. Rely on `click` package for settting up arguments
+
+- Create a quick `gif` animation of running the sript in the terminal - use https://github.com/faressoft/terminalizer to help you create a `gif`. Gif would show the following:
+    - Clone repo,
+    - Run CLI wrapper with a `--help` parameter, that would show some info about the script usage, as well as possible values for preset examples
+    - `ls` in the terminal for a custom `wav`
+    - Run CLI on some custom `wav` file
+
+- Clean this README, provide a nice overview of what the project does and how it achieves the goal - mention steps like:
+    - VAD for voice activation detection
+    - Speech Activity
+    - Diarization clustering
+    - VoxCeleb v1 dataset, metadata example, how the validation data was prepared (point to the right folder in the repo that has the codes, and the weights) -- this step is quite important actually, as people might be interested in downloading our weights
+    - How the embeddings and the final layer were trained
+
 
 ## TODOs:
 
