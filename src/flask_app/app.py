@@ -24,9 +24,9 @@ log.setLevel(logging.DEBUG)
 nav = Nav()
 
 app = Flask(__name__)
-app.config["FILEDIR"] = "static/_files/"
+app.config["FILEDIR"] = f"{project_dir}/src/flask_app/static/_files/"
 app.config["SECRET_KEY"] = "hello_diurisation"
-#app.config["DEBUG_TB_INTERCEPT_REDIRECTS"] = False
+app.config["DEBUG_TB_INTERCEPT_REDIRECTS"] = False
 nav.init_app(app)
 bootstrap = Bootstrap(app)
 socketio = SocketIO(app)
@@ -87,7 +87,7 @@ def bokeh_user():
 
     sname = session.get("wavename", "empty")
     print(sname)
-    pth_str = url_for("static", filename="_files/" + sname)[1:]
+    pth_str = f'{project_dir}/src/flask_app/' + url_for("static", filename="_files/" + sname)[1:]
     pth = Path(pth_str)
     print(type(pth_str))
     print(os.path.isfile(pth_str))
@@ -165,5 +165,9 @@ def end_recording():
 
 if __name__ == "__main__":
     #app.run(debug=True)
-    socketio.run(app, debug=False)
+    socketio.run(app,host='0.0.0.0', debug=True)
 
+# docker run -it -p 5000:5000 -p 5006:5006 --device /dev/snd \
+# 	-e PULSE_SERVER=unix:${XDG_RUNTIME_DIR}/pulse/native \
+# 	-v ${XDG_RUNTIME_DIR}/pulse/native:${XDG_RUNTIME_DIR}/pulse/native \
+# 	--group-add $(getent group audio | cut -d: -f3) --device /dev/snd celeb-recog:latest
