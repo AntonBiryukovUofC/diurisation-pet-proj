@@ -1,7 +1,7 @@
 audioread==2.1.8
 bokeh==1.4.0
 Bootstrap-Flask==1.2.0
-eventlet==0.25.1
+eventlet==0.31.0
 Flask==1.1.1
 flask-nav==0.6
 Flask-SocketIO==4.2.1
